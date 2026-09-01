@@ -1,4 +1,4 @@
-<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+<!-- STIMULUS_CENTERED_MULTIACTION_V2 -->
 # 已关闭或受限方向及适用范围
 
 以下结论仍然有效，但只适用于历史 release 时刻、零目标驾驶员历史、单一方向盘均值曲线等相应旧协议：

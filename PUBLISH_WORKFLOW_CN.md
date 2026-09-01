@@ -1,9 +1,9 @@
-<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+<!-- STIMULUS_CENTERED_MULTIACTION_V2 -->
 # 公开进展发布流程
 
 ## 总体目标保护
 
-顶层文档中的 `STIMULUS_CENTERED_MULTIACTION_V1` 标记表示当前正式叙事是“刺激中心、个体化、多动作驾驶员反应”。主项目发布脚本检测到该标记后，不覆盖这些人工维护的顶层事实文件；Run卡、聚合结果和公开源代码仍可正常更新。
+顶层文档中的 `STIMULUS_CENTERED_MULTIACTION_V2` 标记表示当前正式叙事是修正后的“刺激中心、个体化、多动作驾驶员反应”。主项目发布脚本检测到该标记后，不覆盖这些人工维护的顶层事实文件；Run卡、聚合结果和公开源代码仍可正常更新。
 
 ## 当前多动作审计再生成
 

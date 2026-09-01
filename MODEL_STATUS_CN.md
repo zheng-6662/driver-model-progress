@@ -1,4 +1,4 @@
-<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+<!-- STIMULUS_CENTERED_MULTIACTION_V2 -->
 # 模型状态
 
 ## 总体多动作任务

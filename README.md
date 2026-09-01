@@ -1,4 +1,4 @@
-<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+<!-- STIMULUS_CENTERED_MULTIACTION_V2 -->
 # 极端工况驾驶员模型研究进展
 
 本公开仓库保存可供 GPTPro 审查的项目事实层、历史 Run 卡、聚合结果、公开安全图和必要源代码。当前总体任务已经从“release 后 1 秒方向盘曲线”重置为“极端/高动态刺激后的个体化多动作驾驶员反应”；历史转向任务保留为已完成子任务和基线，不再代表整个课题。

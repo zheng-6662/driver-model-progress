@@ -1,4 +1,4 @@
-<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+<!-- STIMULUS_CENTERED_MULTIACTION_V2 -->
 # 审计索引
 
 ## 当前总体任务审计

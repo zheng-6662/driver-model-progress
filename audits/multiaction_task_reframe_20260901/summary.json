@@ -1,10 +1,11 @@
 {
-  "audit_id": "MULTIACTION_REFRAME_20260901",
+  "audit_id": "MULTIACTION_REFRAME_CORRECTED_MU_SCENE_V2_20260901",
   "status": "CONDITIONAL_READY",
-  "candidate_events": 1488,
+  "candidate_events": 375,
   "strict_online_exact_events": 305,
-  "no_response_events": 8,
+  "no_response_events": 5,
   "models_trained": 0,
+  "correction": "V2 excludes ordinary 1.0/0.8 mu changes, internal low-mu changes and exits; keeps at most one first mu<=0.4 scene entry per recording",
   "privacy_boundary": "aggregate_only_no_subject_or_event_rows",
   "checksum_policy": "not_generated_by_project_rule"
 }
