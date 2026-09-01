@@ -8,6 +8,7 @@ This public repository contains curated project state, run-level research cards,
 2. [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md)
 3. [RUN_INDEX.md](RUN_INDEX.md)
 4. [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md)
+5. [PUBLISH_WORKFLOW_CN.md](PUBLISH_WORKFLOW_CN.md)
 
 ## Privacy boundary
 
