@@ -7,10 +7,11 @@ This public repository contains curated project state, run-level research cards,
 1. [GPTPRO_CONTEXT_CN.md](GPTPRO_CONTEXT_CN.md)
 2. [PROJECT_BACKGROUND_CN.md](PROJECT_BACKGROUND_CN.md)
 3. [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md)
-4. [RUN_INDEX.md](RUN_INDEX.md)
-5. [Claude historical analyses and raw JSONL](claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md)
-6. [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md)
-7. [PUBLISH_WORKFLOW_CN.md](PUBLISH_WORKFLOW_CN.md)
+4. [Pedal, stimulus and multi-action audit](audits/pedal_multiaction_audit_20260901/AUDIT_CN.md)
+5. [RUN_INDEX.md](RUN_INDEX.md)
+6. [Claude historical analyses and raw JSONL](claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md)
+7. [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md)
+8. [PUBLISH_WORKFLOW_CN.md](PUBLISH_WORKFLOW_CN.md)
 
 ## Privacy boundary
 

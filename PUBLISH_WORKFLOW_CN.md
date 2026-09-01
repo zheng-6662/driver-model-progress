@@ -75,6 +75,7 @@ GPTPRO_CONTEXT_CN.md
 ```text
 CURRENT_STATUS_CN.md
 PROJECT_BACKGROUND_CN.md
+audits/pedal_multiaction_audit_20260901/AUDIT_CN.md
 RUN_INDEX.md
 claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md
 REQUEST_TO_GPTPRO_CN.md

@@ -1,6 +1,6 @@
 # Request to GPTPro: Produce the Next Executable Plan
 
-Read `GPTPRO_CONTEXT_CN.md`, `PROJECT_BACKGROUND_CN.md`, `CURRENT_STATUS_CN.md`, `RUN_INDEX.md`, and the relevant run cards/source code before answering. Claude's earlier analyses and sanitized raw JSONL are indexed at `claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md`; use them to reconstruct old reasoning when needed, but resolve conflicts in favor of current run evidence.
+Read `GPTPRO_CONTEXT_CN.md`, `PROJECT_BACKGROUND_CN.md`, `CURRENT_STATUS_CN.md`, `audits/pedal_multiaction_audit_20260901/AUDIT_CN.md`, `RUN_INDEX.md`, and the relevant run cards/source code before answering. Claude's earlier analyses and sanitized raw JSONL are indexed at `claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md`; use them to reconstruct old reasoning when needed, but resolve conflicts in favor of current run evidence.
 
 ## Your task
 
@@ -9,10 +9,11 @@ Propose the single best next experiment or research pivot that is still justifie
 ## Required questions to answer
 
 1. Why did ExtraTrees remain much stronger than all raw-sequence neural models after expanding to 38 drivers?
-2. Does the Run82 relation-state signal justify extracting a small number of legal relation features for the tree model, or would that merely repeat Run62 hand-crafted phase features?
-3. Should the next legal information source be road/event semantics, sequential personalization from completed prior events, self-supervised use of continuous unlabeled recordings, or a changed prediction anchor? Choose one, not all.
+2. Given that the current 134D/172D mainline excludes accelerator and brake, and the new audit confirms substantial pedal activity, should the single next candidate be `ExtraTrees-134D + pedal representation`? If not, explain why the new evidence is still insufficient.
+3. Choose exactly one next legal information source: pedals, road/event semantics, sequential personalization from completed prior events, self-supervised use of continuous unlabeled recordings, or a changed prediction anchor.
 4. How should the 20 truly new drivers be used without repeating the harmful naive pooling in Run76?
 5. Is there any defensible role for physiology/style now that direct mean-prediction increments repeatedly failed?
+6. If pedals are selected, choose one primary representation only: raw 2 s sequence, low-dimensional summary, or current value/onset/change-rate representation. Explain how continuous throttle maintenance will be separated from a stimulus response.
 
 ## Required output format
 

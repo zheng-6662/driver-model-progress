@@ -1,0 +1,82 @@
+{
+  "audit_id": "PEDAL_STIMULUS_MULTIACTION_AVAILABILITY_20260901",
+  "status": "READ_ONLY_AUDIT_COMPLETE",
+  "trained_model": false,
+  "window_relative_to_prediction_anchor_s": [-2.0, 1.0],
+  "descriptive_thresholds": {
+    "pedal_active": 0.01,
+    "pedal_obvious_range_change": 0.05,
+    "onset_pre_release_duration_s": 0.2,
+    "onset_post_active_duration_s": 0.1,
+    "high_speed_kmh": 60.0
+  },
+  "current_mainline_input": {
+    "run57_sequence_channels": [
+      "steer_smooth",
+      "steer_rate",
+      "speed_kmh",
+      "ay",
+      "yaw_rate",
+      "roll_rate",
+      "roll",
+      "curvature",
+      "lateral_distance"
+    ],
+    "accelerator_in_current_mainline": false,
+    "brake_in_current_mainline": false
+  },
+  "cohorts": {
+    "original_pfull": {
+      "subjects": 18,
+      "recordings": 85,
+      "events": 2323,
+      "vehicle_sampling_hz": 200.0,
+      "accelerator_field_files": 85,
+      "brake_field_files": 85,
+      "accelerator_range": [0.0, 1.0],
+      "brake_range": [-0.03, 0.97],
+      "event_any_accelerator_active_fraction": 0.8751614291863969,
+      "event_any_brake_active_fraction": 0.269479121825226,
+      "event_accelerator_change_fraction": 0.8725785622040465,
+      "event_brake_change_fraction": 0.25742574257425743,
+      "no_obvious_pedal_change_count": 125,
+      "continuous_physio_events": 2165,
+      "physio_pre_median_s": 306.019,
+      "physio_post_median_s": 266.527,
+      "stable_brake_onsets": 1925,
+      "high_speed_brake_onsets": 1586,
+      "high_speed_brake_onsets_steer_lt5deg": 397,
+      "high_speed_brake_onsets_steer_ge20deg": 675
+    },
+    "august_eligible": {
+      "subjects_with_eligible_events": 26,
+      "recordings": 136,
+      "events": 275,
+      "vehicle_sampling_hz": 58.8235294118,
+      "accelerator_field_files": 136,
+      "brake_field_files": 136,
+      "accelerator_range": [0.0, 1.0],
+      "brake_range": [-0.03, 0.97],
+      "event_any_accelerator_active_fraction": 0.7636363636363637,
+      "event_any_brake_active_fraction": 0.4509090909090909,
+      "event_accelerator_change_fraction": 0.7636363636363637,
+      "event_brake_change_fraction": 0.39636363636363636,
+      "no_obvious_pedal_change_count": 16,
+      "continuous_physio_events": 265,
+      "physio_pre_median_s": 92.302,
+      "physio_post_median_s": 27.254,
+      "stable_brake_onsets": 547,
+      "high_speed_brake_onsets": 387,
+      "high_speed_brake_onsets_steer_lt5deg": 154,
+      "high_speed_brake_onsets_steer_ge20deg": 113
+    }
+  },
+  "stimulus_recovery": {
+    "original_traffic_distance_triggers": "recoverable_for_recordings_with_threshold_crossings",
+    "original_mu_transition": "recoverable_with_route_mapping",
+    "august_mu_transition": "recoverable",
+    "august_traffic_trigger": "not_exactly_recoverable_from_current_vehicle_files"
+  },
+  "decision": "PEDAL_INPUT_IS_AVAILABLE_AND_NONTRIVIAL; MULTIACTION_LABEL_LAYER_NOT_YET_FROZEN",
+  "evidence_boundary": "Candidate action counts are descriptive and do not establish model gain or validated extreme-event labels."
+}

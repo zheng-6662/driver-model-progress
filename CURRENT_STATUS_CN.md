@@ -33,3 +33,15 @@ The lag-gain relation bottleneck is better than parameter-matched Role-TCN, but 
 - Keep Run79 physiology for mechanism or future changed-estimand studies, not direct mean correction.
 - Do not continue tuning LGRS/TCN/Transformer/Mamba merely to rescue the neural family.
 - A future experiment must introduce genuinely new information or a clearly different legal data-use protocol.
+
+## New pedal and multi-action audit
+
+The current strongest causal summaries exclude accelerator and brake. A new read-only audit confirms that both signals are present and nontrivial in every original and August vehicle recording used by the current cohorts.
+
+- Brake changes occur in 598/2323 original steering events and 109/275 August events.
+- Full continuous recordings contain 1973 stable high-speed brake onsets.
+- Signal quantity is sufficient to build braking-dominant and combined-action candidate pools.
+- The current event tables are steering-selected, so multi-action labels are not yet frozen.
+- Original traffic stimulus timing is partly recoverable; August traffic stimulus timing remains uncertain.
+
+This makes pedals a genuinely new input for the current mainline, but not a proven model increment.

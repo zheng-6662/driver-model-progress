@@ -1,0 +1,8 @@
+cohort,stimulus_source,files_with_signal,files_with_observed_transition_or_crossing,observed_crossings,status
+original_pfull,distance7_lt40m,85,73,74,recoverable
+original_pfull,distance8_lt40m,85,71,77,recoverable
+original_pfull,pointdistance_lt30m,85,77,81,recoverable
+original_pfull,pointdistance9_lt30m,85,72,82,recoverable
+original_pfull,mu_level,85,74,,recoverable_with_route_mapping
+august,mu_level,136,72,,recoverable
+august,traffic_target_distance_or_trigger,0,0,,not_available

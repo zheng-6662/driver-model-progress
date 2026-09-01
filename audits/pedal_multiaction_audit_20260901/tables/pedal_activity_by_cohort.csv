@@ -1,0 +1,3 @@
+cohort,events,vehicle_recordings,vehicle_sampling_hz,event_any_accelerator_active_count,event_any_accelerator_active_fraction,event_any_brake_active_count,event_any_brake_active_fraction,mean_event_accelerator_active_sample_fraction,mean_event_brake_active_sample_fraction,accelerator_change_ge_0p05_count,accelerator_change_ge_0p05_fraction,brake_change_ge_0p05_count,brake_change_ge_0p05_fraction,no_obvious_pedal_change_count,no_obvious_pedal_change_fraction
+original_pfull,2323,85,200.0,2033,0.8751614292,626,0.2694791218,0.6528583119,0.1269881701,2027,0.8725785622,598,0.2574257426,125,0.0538097288
+august_eligible,275,136,58.8235294118,210,0.7636363636,124,0.4509090909,0.5243412199,0.2726008466,210,0.7636363636,109,0.3963636364,16,0.0581818182
