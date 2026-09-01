@@ -1,0 +1,68 @@
+{
+  "audit_id": "MULTIACTION_REFRAME_CORRECTED_MU_SCENE_V2_20260901",
+  "event_windows_s": {
+    "required_pre": 5.0,
+    "required_post": 5.0,
+    "action_search": 5.0
+  },
+  "deduplication": {
+    "same_signal_refractory_s": 2.0,
+    "cross_signal_overlap_s": 1.0
+  },
+  "low_mu_scene": {
+    "threshold": 0.4,
+    "minimum_valid_mu": 0.1,
+    "maximum_events_per_recording": 1,
+    "selection": "first transition from mu>threshold to minimum_valid_mu<=mu<=threshold",
+    "reason": "one low-adhesion scene per recording; ordinary 1.0/0.8 road changes, internal low-mu changes and exits are not new stimuli"
+  },
+  "original_distance_triggers": [
+    {
+      "signal": "pointdistance",
+      "threshold": 30.0,
+      "external_trigger": "ExternTrigger01"
+    },
+    {
+      "signal": "distance7",
+      "threshold": 30.0,
+      "external_trigger": "ExternTrigger03"
+    },
+    {
+      "signal": "distance8",
+      "threshold": 30.0,
+      "external_trigger": "ExternTrigger04"
+    },
+    {
+      "signal": "pointdistance9",
+      "threshold": 30.0,
+      "external_trigger": "ExternTrigger06"
+    }
+  ],
+  "candidate_label_thresholds": {
+    "lenient": {
+      "steer_delta_deg": 3.0,
+      "brake_delta": 0.03,
+      "accelerator_delta": 0.03
+    },
+    "primary": {
+      "steer_delta_deg": 5.0,
+      "brake_delta": 0.05,
+      "accelerator_delta": 0.05
+    },
+    "strict": {
+      "steer_delta_deg": 8.0,
+      "brake_delta": 0.08,
+      "accelerator_delta": 0.08
+    }
+  },
+  "sustain_s": 0.10,
+  "finite_coverage_min": 0.95,
+  "fixed_figure_seed": 20260901,
+  "privacy": {
+    "subject_alias_prefix": "S",
+    "recording_alias_prefix": "R",
+    "allow_direct_identifiers": false,
+    "allow_custom_hashes": false,
+    "allow_checksums": false
+  }
+}

@@ -3,18 +3,18 @@
 
 ## 当前总体任务审计
 
-- [多动作任务重置审计入口](audits/multiaction_task_reframe_20260901/README.md)
-- [执行摘要](audits/multiaction_task_reframe_20260901/00_EXECUTIVE_SUMMARY_CN.md)
-- [原始目标可追溯核查](audits/multiaction_task_reframe_20260901/01_ORIGINAL_OBJECTIVE_TRACEABILITY_CN.md)
-- [刺激恢复](audits/multiaction_task_reframe_20260901/02_STIMULUS_RECOVERY_CN.md)
-- [动作候选标签](audits/multiaction_task_reframe_20260901/03_ACTION_LABEL_AUDIT_CN.md)
-- [样本充分性](audits/multiaction_task_reframe_20260901/04_SAMPLE_SUFFICIENCY_CN.md)
-- [顺序个体化可行性](audits/multiaction_task_reframe_20260901/05_PERSONALIZATION_FEASIBILITY_CN.md)
-- [生理数据可行性](audits/multiaction_task_reframe_20260901/06_PHYSIOLOGY_FEASIBILITY_CN.md)
-- [车辆响应目标](audits/multiaction_task_reframe_20260901/07_VEHICLE_RESPONSE_TARGETS_CN.md)
-- [数据合同草案](audits/multiaction_task_reframe_20260901/08_DATA_CONTRACT_DRAFT_CN.md)
-- [验证协议草案](audits/multiaction_task_reframe_20260901/09_VALIDATION_PROTOCOL_DRAFT_CN.md)
-- [未解决问题与决策门](audits/multiaction_task_reframe_20260901/10_OPEN_ISSUES_AND_DECISION_GATES_CN.md)
+- [多动作任务修正V2审计入口](audits/multiaction_task_reframe_v2_20260901/README.md)
+- [执行摘要](audits/multiaction_task_reframe_v2_20260901/00_EXECUTIVE_SUMMARY_CN.md)
+- [原始目标可追溯核查](audits/multiaction_task_reframe_v2_20260901/01_ORIGINAL_OBJECTIVE_TRACEABILITY_CN.md)
+- [刺激恢复](audits/multiaction_task_reframe_v2_20260901/02_STIMULUS_RECOVERY_CN.md)
+- [动作候选标签](audits/multiaction_task_reframe_v2_20260901/03_ACTION_LABEL_AUDIT_CN.md)
+- [样本充分性](audits/multiaction_task_reframe_v2_20260901/04_SAMPLE_SUFFICIENCY_CN.md)
+- [顺序个体化可行性](audits/multiaction_task_reframe_v2_20260901/05_PERSONALIZATION_FEASIBILITY_CN.md)
+- [生理数据可行性](audits/multiaction_task_reframe_v2_20260901/06_PHYSIOLOGY_FEASIBILITY_CN.md)
+- [车辆响应目标](audits/multiaction_task_reframe_v2_20260901/07_VEHICLE_RESPONSE_TARGETS_CN.md)
+- [数据合同草案](audits/multiaction_task_reframe_v2_20260901/08_DATA_CONTRACT_DRAFT_CN.md)
+- [验证协议草案](audits/multiaction_task_reframe_v2_20260901/09_VALIDATION_PROTOCOL_DRAFT_CN.md)
+- [未解决问题与决策门](audits/multiaction_task_reframe_v2_20260901/10_OPEN_ISSUES_AND_DECISION_GATES_CN.md)
 
 ## 历史过渡审计
 

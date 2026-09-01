@@ -1,7 +1,7 @@
 <!-- STIMULUS_CENTERED_MULTIACTION_V2 -->
 # 请求 GPTPro：审查刺激中心多动作数据合同并给出下一阶段最小方案
 
-请先完整阅读 `GPTPRO_CONTEXT_CN.md`、`PROJECT_BACKGROUND_CN.md`、`CURRENT_STATUS_CN.md`、`AUDIT_INDEX.md` 和 `audits/multiaction_task_reframe_20260901/` 下01—10号报告。需要历史证据时再读 Run57—Run82 卡片，且必须把它们限定为旧 release 转向子任务。
+请先完整阅读 `GPTPRO_CONTEXT_CN.md`、`PROJECT_BACKGROUND_CN.md`、`CURRENT_STATUS_CN.md`、`AUDIT_INDEX.md` 和 `audits/multiaction_task_reframe_v2_20260901/` 下01—10号报告。旧目录 `audits/multiaction_task_reframe_20260901/` 仅保留历史，不得作为当前数字来源。需要历史证据时再读 Run57—Run82 卡片，且必须把它们限定为旧 release 转向子任务。
 
 ## 你的任务
 

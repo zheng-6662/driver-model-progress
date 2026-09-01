@@ -9,7 +9,7 @@
 2. [PROJECT_BACKGROUND_CN.md](PROJECT_BACKGROUND_CN.md)
 3. [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md)
 4. [AUDIT_INDEX.md](AUDIT_INDEX.md)
-5. [多动作任务重置审计](audits/multiaction_task_reframe_20260901/README.md)
+5. [多动作任务修正V2审计](audits/multiaction_task_reframe_v2_20260901/README.md)
 6. [RUN_INDEX.md](RUN_INDEX.md)
 7. [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md)
 8. [PUBLISH_WORKFLOW_CN.md](PUBLISH_WORKFLOW_CN.md)
