@@ -1,0 +1,10 @@
+{
+  "audit_id": "MULTIACTION_REFRAME_20260901",
+  "status": "CONDITIONAL_READY",
+  "candidate_events": 1488,
+  "strict_online_exact_events": 305,
+  "no_response_events": 8,
+  "models_trained": 0,
+  "privacy_boundary": "aggregate_only_no_subject_or_event_rows",
+  "checksum_policy": "not_generated_by_project_rule"
+}

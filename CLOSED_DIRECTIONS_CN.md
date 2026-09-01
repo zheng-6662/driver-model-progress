@@ -1,14 +1,24 @@
-# Closed or Restricted Directions
+<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+# 已关闭或受限方向及适用范围
 
-- Static-tree family swap without new representation: no-go.
-- Road-preview residual correction: diagnostic/no-go.
-- Amplitude-shape factorization as the main fix: no-go.
-- Low-rank residual and soft expert gate: below promotion gates.
-- Direct physiology/style concatenation: no-go across several runs.
-- Physiology TCN/BIOT/FiLM/interval calibration: not promoted.
-- Eye tracking direct increment: no-go.
-- EEG/trait direct increment: no-go.
-- Naive pooling of August events into original training: harmful.
-- LGRS/raw neural sequence family as replacement for ExtraTrees: no-go.
+以下结论仍然有效，但只适用于历史 release 时刻、零目标驾驶员历史、单一方向盘均值曲线等相应旧协议：
 
-Changed-estimand rolling prediction after observing post-release points has strong signal, but it is not the same release-time task and failed a road-missing guardrail in Run69.
+- 静态树模型家族替换没有新表征：未晋级。
+- 道路预览残差修正：诊断/未晋级。
+- 幅值—形状因子化作为旧转向主修复：未晋级。
+- 低秩残差和软门控：未通过旧晋级门。
+- 直接生理/驾驶风格拼接预测旧方向盘均值曲线：未晋级。
+- 生理TCN、BIOT、FiLM和区间校准：在对应旧协议下未晋级。
+- 眼动和EEG直接增量：在对应旧转向协议下未晋级。
+- 将8月旧转向事件直接朴素合池：对原始驾驶员有害。
+- LGRS/raw神经序列家族替代旧ExtraTrees方向盘基线：未晋级。
+
+这些结论不能写成：
+
+- 生理对动作选择、反应时延、个体校准或预测不确定性无效；
+- TCN/LGRS没有超过ExtraTrees等于Transformer不适合新多动作任务；
+- 踏板没有价值；
+- release是完整多动作研究唯一合法起点；
+- 个体早期完整recording历史没有价值。
+
+Run69在观察release后0.4秒车辆点后取得强信号，但改变了估计目标并且道路缺失保护门失败；它仍是历史滚动转向任务证据，不是刺激中心多动作任务结论。

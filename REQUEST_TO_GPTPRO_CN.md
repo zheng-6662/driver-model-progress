@@ -1,32 +1,35 @@
-# Request to GPTPro: Produce the Next Executable Plan
+<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+# 请求 GPTPro：审查刺激中心多动作数据合同并给出下一阶段最小方案
 
-Read `GPTPRO_CONTEXT_CN.md`, `PROJECT_BACKGROUND_CN.md`, `CURRENT_STATUS_CN.md`, `audits/pedal_multiaction_audit_20260901/AUDIT_CN.md`, `RUN_INDEX.md`, and the relevant run cards/source code before answering. Claude's earlier analyses and sanitized raw JSONL are indexed at `claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md`; use them to reconstruct old reasoning when needed, but resolve conflicts in favor of current run evidence.
+请先完整阅读 `GPTPRO_CONTEXT_CN.md`、`PROJECT_BACKGROUND_CN.md`、`CURRENT_STATUS_CN.md`、`AUDIT_INDEX.md` 和 `audits/multiaction_task_reframe_20260901/` 下01—10号报告。需要历史证据时再读 Run57—Run82 卡片，且必须把它们限定为旧 release 转向子任务。
 
-## Your task
+## 你的任务
 
-Propose the single best next experiment or research pivot that is still justified by the evidence. The output must be implementation-ready, not a general brainstorming list.
+判断本轮刺激中心数据合同是否足以进入下一阶段，并给出一个最小、可执行、不会混淆科学问题的方案。不要直接要求训练大模型；先解决刺激语义、样本和协议门。
 
-## Required questions to answer
+## 必答问题
 
-1. Why did ExtraTrees remain much stronger than all raw-sequence neural models after expanding to 38 drivers?
-2. Given that the current 134D/172D mainline excludes accelerator and brake, and the new audit confirms substantial pedal activity, should the single next candidate be `ExtraTrees-134D + pedal representation`? If not, explain why the new evidence is still insufficient.
-3. Choose exactly one next legal information source: pedals, road/event semantics, sequential personalization from completed prior events, self-supervised use of continuous unlabeled recordings, or a changed prediction anchor.
-4. How should the 20 truly new drivers be used without repeating the harmful naive pooling in Run76?
-5. Is there any defensible role for physiology/style now that direct mean-prediction increments repeatedly failed?
-6. If pedals are selected, choose one primary representation only: raw 2 s sequence, low-dimensional summary, or current value/onset/change-rate representation. Explain how continuous throttle maintenance will be separated from a stimulus response.
+1. 权威开题没有逐项写明制动与加速踏板直接输出。本轮把它们明确为多动作目标，是否科学合理？需要怎样向导师表述“继承”与“扩展”的边界？
+2. 原始 `ExternTrigger01/03/04/06` 已恢复到30 m配置阈值，但具体交通车动作语义未闭合。哪些语义证据必须补齐，才能冻结正式刺激类别？
+3. 8月原始CSV存在 `distance_truck` 和 `distance_changlane`，但脚本阈值未知。应该怎样恢复脚本，若恢复失败又应如何把8月数据限定为弱标签或外部域？
+4. `mu`阶跃时刻精确但为 `script_label_only`。是否允许作为离线机制任务，还是必须先找到在线附着估计代理？
+5. 1488个候选事件中只有305个严格在线精确子集，且59.3%的有事件recording最小间隔小于2秒。第一版正式合同应该以哪个人口为主，如何控制过密和同recording相关性？
+6. 主阈值下仅8个无明显反应，宽松/严格阈值和1/2/3/5秒窗口如何用于冻结动作选择标签，而不是事后挑最有利阈值？
+7. 顺序个体化应采用哪个最低校准层级：完整早期recording普通驾驶分钟、已完成事件数量，还是二者组合？
+8. 生理应优先放在长期个体基线、刺激前状态、刺激后滚动更新、动作概率、时延或不确定性中的哪一个位置？只能选择一个最小主假设，并说明为什么Run80没有覆盖它。
+9. 速度、纵向/横向加速度、yaw/roll等车辆响应应如何区分正式目标、辅助目标和解释变量？如何分开真实操作输入的车辆模块与预测操作输入的端到端评价？
+10. 哪些阻塞项必须解决后才能从 `CONDITIONAL_READY` 升级，哪些可以作为预先声明的缺失分层保留？
 
-## Required output format
+## 输出格式
 
-- One-sentence hypothesis.
-- Exact population and folds.
-- Exact input representation available at inference.
-- Exact target and prediction anchor.
-- One baseline and one candidate only, plus essential ablations.
-- Training-only model selection procedure.
-- Subject-level and amplitude-level metrics.
-- Predeclared success and stop rules.
-- Files/code that need to be changed.
-- Expected compute and run order.
-- Evidence boundary and claims that remain prohibited.
+- 一句话总体判断；
+- 对当前数据合同逐项通过/条件通过/阻塞；
+- 推荐的第一版正式人口和刺激类型；
+- 推荐的唯一最小主假设；
+- 样本单位、锚点、合法输入、输出和滚动时刻；
+- 顺序个体化和subject-disjoint双层验证结构；
+- 训练前必须完成的人工抽查与统计；
+- 明确成功门、停止门和不允许的结论；
+- 如果当前仍不应训练，给出最小补证清单。
 
-Do not recommend a broad hyperparameter search. Do not reopen a no-go route without identifying the genuinely new information or mechanism that makes it different.
+在GPTPro完成审查前，不启动Transformer、ExtraTrees+踏板或其他正式模型实验。

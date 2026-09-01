@@ -1,9 +1,27 @@
-# Data Status
+<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+# 数据状态
 
-- Original strict-causal population: 2323 events, 18 subjects, 85 recordings.
-- August eligible population: 275 events, 26 subjects.
-- Truly new August drivers: 20.
-- Combined population: 2598 events, 38 drivers, 190 recordings.
-- August four-channel physiology: 27 subjects, 188 recordings processed.
-- Eye tracking was matched for 68/85 original recordings; the tested increment was no-go.
-- Raw data are intentionally not published in this repository.
+## 批次沿革
+
+- 原始主队列：18名驾驶员、85个参考 recording。
+- 2025年8月：29个目录、27名有四通道生理、26名有选定车辆 recording、136个车辆 recording。
+- 跨批次同一驾驶员：6名。
+- 8月真正新增驾驶员：20名。
+- 历史 release 转向子任务：原始2323事件、8月275事件、合并2598事件与38名驾驶员。
+
+## 当前刺激中心候选数据
+
+- 从连续 recording 检测1795条刺激记录。
+- 纳入1488个候选事件，覆盖28名驾驶员、108个recording。
+- 305个属于配置阈值明确且具备目标感知假设的严格在线子集。
+- `mu`事件时间精确但为 `script_label_only`。
+- 无明显反应样本保留8个。
+- 主阈值只是候选；宽松、主、严格三组均已报告。
+
+## 生理与车辆响应
+
+- 1363个刺激候选可连接连续生理层，1170个通过当前四通道质量门。
+- 速度、纵向加速度、横向加速度覆盖最好，可作为优先车辆响应目标。
+- yaw rate与roll rate跨批次覆盖不一致，只能分批次辅助报告。
+
+原始数据、事件级表和驾驶员级表不在本公开仓库发布。

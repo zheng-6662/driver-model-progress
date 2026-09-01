@@ -1,47 +1,45 @@
-# Current Project Status
+<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+# 当前项目状态
 
-## Outcome first
+## 结论先行
 
-The project now has a stronger data foundation (2598 events, 38 drivers) and clean physiology/eye/EEG inventories, but the strongest practical release-time predictor is still ExtraTrees on causal vehicle summaries.
+总体任务已重置为“刺激后的个体化多动作驾驶员反应”。当前处于刺激中心数据重建与合同审查阶段，状态为 `CONDITIONAL_READY`；尚未训练完整多动作模型。
 
-## Main practical baseline
+## 已完成
 
-| Population | Model | Subject-macro curve MAE |
-|---|---|---:|
-| Original 18 | ExtraTrees / no-rate comparable line | about 12.62-12.97 deg depending exact cohort protocol |
-| Combined 38 | ExtraTrees-134D | 14.1103 deg |
-| August new 20 | ExtraTrees-134D | 15.1089 deg |
+- 直接读取权威开题原文，确认课题题目是“基于多模态数据驱动”，Transformer只是技术路线。
+- 确认8月数据采集年份为2025。
+- 闭合18人/85 recording与29目录/27生理/26车辆/20新增驾驶员的批次沿革。
+- 从85+136个连续车辆 recording 恢复刺激字段，不从旧2323/275转向事件反推总体事件集。
+- 生成1488个纳入候选事件和三通道主阈值候选标签，保留8个无明显反应事件。
+- 完成三组阈值、1/2/3/5秒窗口、样本充分性、recording顺序个体化、生理覆盖、车辆响应通道和公开隐私审计。
 
-## Latest scientific decision
+## 关键数字
 
-Run82 decision: `LGRS_NOT_EFFECTIVE`.
+| 指标 | 当前候选审计 |
+|---|---:|
+| 检测刺激记录 | 1795 |
+| 纳入候选事件 | 1488 |
+| 严格在线精确子集 | 305 |
+| 贡献候选事件的驾驶员 | 28 |
+| 贡献候选事件的recording | 108 |
+| 无明显反应事件 | 8 |
+| 生理可连接事件 | 1363 |
+| 当前四通道质量门通过 | 1170 |
 
-The lag-gain relation bottleneck is better than parameter-matched Role-TCN, but it does not beat ExtraTrees. The result supports a representation mechanism, not a new main predictor.
+## 尚未闭合
 
-## Data expansion status
+- 原始 `ExternTrigger01/03/04/06` 到具体交通车动作的权威语义；
+- 8月 `distance_truck` / `distance_changlane` 的场景脚本与触发阈值；
+- `mu` 在真实部署中的零延迟在线代理；
+- 过密事件与低频动作组合的最终处理；
+- 20分钟个体生理基线覆盖不足；
+- 开题未逐项写明制动/加速踏板直接输出，需GPTPro和导师确认扩展范围。
 
-- 29 August subject directories inspected.
-- 27 subjects have four-channel physiology.
-- 26 subjects have eligible vehicle events.
-- 20 are truly new drivers relative to the original cohort.
-- 275 August events satisfy the current screening contract.
-- Combined rows: 2598; combined distinct drivers: 38.
+## 历史模型定位
 
-## Current model-use recommendation
+ExtraTrees-134D仍是历史 release 后1秒方向盘子任务的当前最强实用基线，不是总体项目的最终模型。Run57—Run82的实验结果、代码和no-go结论保持不变，但适用范围必须限定在旧转向协议。
 
-- Keep ExtraTrees as the main release-time predictor.
-- Keep Run79 physiology for mechanism or future changed-estimand studies, not direct mean correction.
-- Do not continue tuning LGRS/TCN/Transformer/Mamba merely to rescue the neural family.
-- A future experiment must introduce genuinely new information or a clearly different legal data-use protocol.
+## 下一步边界
 
-## New pedal and multi-action audit
-
-The current strongest causal summaries exclude accelerator and brake. A new read-only audit confirms that both signals are present and nontrivial in every original and August vehicle recording used by the current cohorts.
-
-- Brake changes occur in 598/2323 original steering events and 109/275 August events.
-- Full continuous recordings contain 1973 stable high-speed brake onsets.
-- Signal quantity is sufficient to build braking-dominant and combined-action candidate pools.
-- The current event tables are steering-selected, so multi-action labels are not yet frozen.
-- Original traffic stimulus timing is partly recoverable; August traffic stimulus timing remains uncertain.
-
-This makes pedals a genuinely new input for the current mainline, but not a proven model increment.
+先由GPTPro审查本轮刺激中心合同、样本充分性、顺序个体化、生理作用位置和决策门；在刺激映射闭合、标签抽查和正式合同冻结前，不启动大模型训练。

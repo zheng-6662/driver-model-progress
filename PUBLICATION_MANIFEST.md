@@ -1,7 +1,10 @@
-# Publication Manifest
+<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+# 公开发布清单
 
-- Run cards: 26 (Run57 through Run82)
-- Selected source/artifact/figure files: 148
-- Claude history: 53 sanitized JSONL files, 3961 records, 19 project-memory notes, 1 formal review task, and 24 extracted final analyses.
-- Pedal/multi-action audit: 1 Chinese report, 1 machine-readable summary, and 4 aggregate tables; no event-level or subject-level rows.
-- Excluded: raw experimental data, unsanitized caches/logs, checkpoints, per-event predictions, source inventories and subject-level tables.
+- 历史 Run 卡：Run57—Run82，共26个，仅代表release方向盘子任务。
+- 当前多动作任务重置审计：11份中文报告、1份入口说明、1份机器可读总摘要、7份总体聚合表、8幅公开安全图。
+- 历史踏板/多动作可用性初查：保留为过渡证据，当前结论以新审计为准。
+- Claude历史：保留既有脱敏公开副本与索引。
+- 顶层文档：总体目标、数据状态、模型状态、关闭方向、GPTPro请求、发布流程和审计索引已统一到刺激中心多动作合同。
+
+明确排除：原始实验数据、未脱敏缓存/日志、checkpoint、逐事件预测、一行一驾驶员表、一行一事件表、匿名ID对应表、原始文件清单、本机路径和私有审查压缩包。

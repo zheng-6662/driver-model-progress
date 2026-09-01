@@ -1,118 +1,71 @@
-# GPTPro Direct Project Context
+<!-- STIMULUS_CENTERED_MULTIACTION_V1 -->
+# GPTPro 项目直接上下文
 
-## Required reading order
+## 必读顺序
 
-1. Read this file completely.
-2. Read [PROJECT_BACKGROUND_CN.md](PROJECT_BACKGROUND_CN.md).
-3. Read [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md).
-4. Read the new [pedal, stimulus and multi-action audit](audits/pedal_multiaction_audit_20260901/AUDIT_CN.md).
-5. Read [RUN_INDEX.md](RUN_INDEX.md).
-6. Read [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md).
-7. When an earlier design decision needs reconstruction, read [Claude history index](claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md) and then open only the relevant raw JSONL or extracted conclusion.
-8. Open only the run cards needed to support your proposed next plan.
+1. 完整阅读本文件。
+2. 阅读 [PROJECT_BACKGROUND_CN.md](PROJECT_BACKGROUND_CN.md)。
+3. 阅读 [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md)。
+4. 阅读 [AUDIT_INDEX.md](AUDIT_INDEX.md) 和当前多动作审计的01—10号报告。
+5. 需要追溯历史转向实验时，再阅读 [RUN_INDEX.md](RUN_INDEX.md) 和对应 Run 卡。
+6. 最后阅读 [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md)。
 
-Do not infer current status from an older run. Do not treat a diagnostic result as a validated model gain.
+不要从旧 Run 推断当前总体目标。不要把诊断性统计、旧子任务平均指标或模型机制信号写成新总体任务的已验证收益。
 
 ## Bottom-line research problem
 
-At the release time of a high-dynamic / near-instability proxy driving event, use only information available at or before release to predict the complete 20-point steering response curve over release +0.05 to +1.00 seconds, with subject-disjoint generalization.
+在可在线识别的极端或高动态刺激后，利用当前车辆/道路状态、驾驶员此前完整驾驶历史和合法生理状态，预测其后续方向盘、制动和加速踏板的联合反应：
 
-Aligned target convention:
+- 动作选择：转向、制动、松油、维持、补油和无明显反应；
+- 各通道反应时延；
+- 操作强度和持续时间；
+- 条件短时操作轨迹；
+- 操作引起的速度、纵向/横向加速度、横摆、侧倾等车辆响应。
 
-```text
-aligned_deg = degrees((target - release_value) * direction)
-```
+Transformer是预定时序融合路线之一，但当前阶段没有训练总体任务模型，也不能把“使用Transformer”本身写成创新。
 
-## Current data
+## 当前数据事实
 
-- Original strict-causal population: 2323 events, 18 subjects, 85 recordings.
-- August cohort: 275 eligible events, 26 subjects with eligible events.
-- Truly new August drivers relative to the original cohort: 20.
-- Combined modeling population: 2598 events, 38 distinct drivers, 190 recordings.
-- Shared vehicle input across cohorts: steering angle, steering rate, speed, lateral acceleration, roll, curvature, lateral distance, plus road-missing mask.
-- August four-channel physiology: 27 subjects, 188 recordings preprocessed in Run79.
-- Processed physiology can be joined to 265/275 August events.
+- 原始批次：18名驾驶员、85个参考 recording。
+- 2025年8月批次：29个目录、27名有四通道生理、26名有车辆 recording 和旧转向事件、136个选定车辆 recording。
+- 跨批次同一驾驶员：6名；8月真正新增驾驶员：20名。
+- 历史 release 转向人口：原始2323事件、8月275事件、合并2598事件、38名驾驶员、190个用于旧建模口径的recording。
+- 当前刺激中心审计使用85+136个连续 recording，而不是旧转向事件表。
 
-## New legal input evidence: accelerator and brake
+## 当前刺激中心审计
 
-The current Run57–Run82 mainline does not include accelerator or brake in its 134D/172D causal vehicle summaries. A read-only audit has now confirmed that both pedal fields exist in all 85 original and all 136 August vehicle recordings.
+- 检测刺激记录1795条；
+- 纳入候选事件1488个；
+- 配置阈值明确、具备目标感知假设的严格在线子集305个；
+- 候选事件覆盖28名驾驶员、108个recording；
+- 主阈值下保留8个无明显反应事件；
+- 每名驾驶员事件数中位16.5，最大195，分布不均；
+- 59.3%的有事件recording最小事件间隔小于2秒，需在建模前处理相关性和过密问题。
 
-- Original P_full: accelerator active in 87.5% and brake active in 26.9% of release-2s to release+1s event windows; 598/2323 events have a brake range change of at least 0.05.
-- August eligible: accelerator active in 76.4% and brake active in 45.1%; 109/275 events have a brake range change of at least 0.05.
-- Full recordings contain 1973 stable brake onsets at speed >=60 km/h, including 551 with less than 5 deg steering in the next second and 788 with at least 20 deg steering.
-- Original traffic-stimulus timing is partly recoverable from recorded target-distance thresholds; August traffic trigger timing is not present, although road-mu transitions are recorded.
+## 刺激恢复边界
 
-This establishes availability and candidate quantity, not predictive gain. Read the audit before proposing the next experiment.
+原始批次四类距离字段在30 m阈值处连接到 `ExternTrigger01/03/04/06`，时刻可从连续信号精确恢复，并可在部署端假设目标感知模块提供相对距离。但触发编号对应的具体交通车动作语义尚未在文本配置中恢复。
 
-## Current strongest practical model
+两批 `mu` 均出现多级进入/退出变化；时刻精确，但当前没有合法零延迟在线代理，因此是 `script_label_only`。
 
-ExtraTrees using the 134-dimensional no-yaw-rate/no-roll-rate summary remains the strongest model on the combined 38-driver development protocol:
+8月原始车辆CSV含 `distance_truck` 与 `distance_changlane`。该发现推翻了“8月交通距离完全不存在”的旧表述；但8月触发阈值和脚本语义尚未恢复，诊断 crossing 不进入正式候选池。
 
-```text
-subject-macro curve MAE = 14.1103 deg
-```
+## 候选标签与生理
 
-By domain:
+方向盘、制动、油门均已形成候选标签，并按宽松/主/严格三组阈值和1/2/3/5秒窗口报告。制动按recording估计释放零位，处理约-0.03零偏；油门相对刺激前基线区分松油、维持和补油；未来主转向方向没有进入预测输入。
 
-```text
-original 18 drivers = 12.9685 deg
-August all = 15.1924 deg
-August truly new 20 drivers = 15.1089 deg
-```
+1488个候选事件中，1363个可连接连续生理层，1170个通过当前四通道质量门；刺激前30/60秒覆盖达到90%的事件分别为1359/1340。可形成当前recording内5/10/20分钟早期生理基线的事件为667/34/0，说明长基线覆盖很快收缩。
 
-## Latest method result: Run82
+## 历史 release 转向子任务
 
-```text
-ExtraTrees-134D = 14.1103 deg
-Plain Raw-TCN   = 19.1768 deg
-Role-TCN        = 18.0616 deg
-LGRS-lambda0    = 17.9139 deg
-LGRS            = 17.5390 deg
-```
+Run57—Run82仍然有效，但只适用于旧协议：release时刻、零目标驾驶员历史、单一方向盘均值曲线、subject-disjoint群体泛化。
 
-LGRS versus parameter-matched Role-TCN:
+该子任务的当前最强实用基线是 ExtraTrees-134D，合并38名驾驶员 subject-macro curve MAE为14.1103度。Run82的LGRS优于参数配平Role-TCN，但仍显著落后ExtraTrees。这个结果不允许写成新多动作任务的模型结论。
 
-- subject-macro gain +0.5226 deg
-- 95% subject-bootstrap CI [+0.0443, +1.0023]
-- 5/5 outer folds positive
-- 26/38 subjects improved
-- amplitude protection passed
+## 当前状态
 
-LGRS versus ExtraTrees:
+`CONDITIONAL_READY`：数据合同、候选表、阈值审计、样本/个体化/生理/车辆目标审计已经形成，可供 GPTPro 决策；由于刺激语义映射未闭合，尚未达到正式模型阶段。当前总体多动作任务没有正式模型、没有性能结果。
 
-- subject-macro gain -3.4287 deg
-- 95% CI [-4.6142, -2.4021]
-- 0/5 folds positive
-- only 3/38 subjects improved
-- all amplitude bins were worse
+## GPTPro需要做的事
 
-Interpretation: explicit command-response lag/gain modeling is useful inside neural sequence models, but the neural family remains substantially worse than the tree baseline. LGRS is not allowed to replace ExtraTrees.
-
-## Important negative evidence
-
-- Changing ExtraTrees to LightGBM/HistGBM did not close the gap (Run60).
-- Road preview residual correction did not produce an independent gain (Run61).
-- Amplitude-shape factorization and eight hand-crafted phase features failed (Run62).
-- Low-rank residual and soft gating did not pass frozen gates (Run63).
-- Direct physiology/style, physiology TCN, FiLM, BIOT and related residual routes did not pass (Run64-68).
-- Eye tracking did not improve the original 18-driver model (Run73).
-- Directly pooling early August data into original training harmed original-driver performance (Run76).
-- Formally preprocessed physiology still did not improve vehicle prediction (Run79-80).
-- Raw vehicle TCNs and LGRS remained much worse than ExtraTrees (Run82).
-
-## Positive but bounded evidence
-
-- Removing missing yaw/roll-rate channels has negligible overall MAE impact, so August vehicle data are not blocked by those channels (Run75).
-- Additional August data increase the independent driver count, but naive pooling is harmful (Run76/78).
-- Clean physiology signals are now available for mechanism analysis, although they are not a direct mean-prediction increment (Run79/80).
-- LGRS lag perturbation increases error, confirming that command-response timing is used; this is mechanism evidence only (Run82).
-- Waiting until t0+0.4 s and observing points 1-8 greatly improves tail prediction, but this is a changed estimand and failed a road-missing protection gate (Run69).
-
-## Current evidence boundary
-
-- Do not claim theoretical unpredictability or causal irreducible noise.
-- Do not use release-post information in the release-time task.
-- Do not promote a mechanism gain if the full model loses to ExtraTrees.
-- Subject-macro and amplitude-stratified relative error are primary; pooled MAE is reference only.
-- Any next plan must use subject-disjoint validation and keep same-driver sessions in one fold.
-- Do not retry a closed route by changing only its name or backbone.
+审查刺激中心数据合同是否科学、样本是否足够、哪些刺激和动作可进入第一版正式合同、顺序个体化和生理应放在哪个阶段，以及下一阶段最小验证方案。不要在审查前要求直接训练Transformer或把所有模态一次性堆进大系统。
