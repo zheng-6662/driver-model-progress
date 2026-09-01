@@ -1,6 +1,6 @@
 # Request to GPTPro: Produce the Next Executable Plan
 
-Read `GPTPRO_CONTEXT_CN.md`, `PROJECT_BACKGROUND_CN.md`, `CURRENT_STATUS_CN.md`, `RUN_INDEX.md`, and the relevant run cards/source code before answering.
+Read `GPTPRO_CONTEXT_CN.md`, `PROJECT_BACKGROUND_CN.md`, `CURRENT_STATUS_CN.md`, `RUN_INDEX.md`, and the relevant run cards/source code before answering. Claude's earlier analyses and sanitized raw JSONL are indexed at `claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md`; use them to reconstruct old reasoning when needed, but resolve conflicts in favor of current run evidence.
 
 ## Your task
 

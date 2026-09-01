@@ -1,0 +1,19 @@
+- [日志与主线已搬到 05_rebuild_from_raw_20260511](project_log_location_rebuild_20260511.md) — 2026-05-11 起状态看板在 `05_rebuild_from_raw_20260511\00_project_notes\`，旧 progress 日志停更；查最新状态还要看 03_baselines 最大 vNNN 目录。
+- [优先使用 predict2 与 GPU](feedback_python_default_version.md) — Claude/Codex 跑 Python 默认用 conda `predict2`，跑模型默认优先 GPU。
+- [运行代码固定用 predict2 和 GPU](feedback_predict2_gpu_hard_requirement.md) — 用户明确要求运行代码固定走 predict2 环境 Python，并用 GPU。
+- [极限工况驾驶员反应建模方向](project_driver_model_direction_20260402.md) — 当前更关注短时真实反应、多动作表征与先分类后预测。
+- [Claude 与 Codex 双向思考协作偏好](feedback_claude_codex_bilateral_review.md) — 协作应包含双方思考、查错与交叉 review，而非单向执行。
+- [新进度记录协议默认规则](feedback_progress_logging_new_protocol.md) — 进度默认写 `05_rebuild_from_raw_20260511\00_project_notes` 看板（PROJECT_STATUS_CN 顶部倒序追加）；reports/progress 与 master 均已停更。
+- [论文模型工作先写主进度日志（旧规则）](feedback_progress_log_for_paper_model.md) — 历史偏好；现已被 reports/progress 新协议取代，不再作为默认动作。
+- [论文模型诊断要结合文献](feedback_use_literature_for_driver_response_modeling.md) — 不只看仓库内结果，也结合反应时延、驾驶习惯和个体差异等文献解释。
+- [文献检索优先走 ScholarAIO/Zotero 老链路](feedback_use_literature_for_driver_response_modeling.md) — 在本项目里，找文献、筛文献、导入 Zotero 时优先用恢复后的 ScholarAIO/Zotero 工作流；较重的联合任务再挂 Codex bridge。
+- [Attribution 归因分析的最终目标](project_attribution_goal_20260403.md) — 归因不是为了描述，而是要诊断 conditioned v2 tail 退化根因，给出可操作的改进方向。
+- [回答要精炼并优先表格化](feedback_compact_table_first_responses.md) — 状态、指标、实验情况优先用短结论+表格，保留信息但避免又窄又长。
+- [分析清楚后可更主动执行](feedback_less_conservative_when_analysis_is_clear.md) — Claude/Codex 已分析清楚时，不必总收缩到最小方案，可更主动直接实验。
+- [非重大执行默认直接推进](feedback_no_need_to_ask_for_routine_execution.md) — 非重大策略调整或常规执行细节（含项目日志）不必单独请示，直接做。
+- [未来要支持生理信号流接口](project_future_physio_stream_interface_goal.md) — 主线未来要能接在线生理信号流，但当前验证别被多模态提前拖散。
+- [Windows 命令执行默认规范](feedback_windows_command_execution_rules.md) — 默认避免长内联 PowerShell，优先 pwsh -File 或 predict2 Python，减少乱码与引号问题。
+- [真实实验道路场景以新 SILAB 结果为准](project_real_silab_road_scene_20260413.md) — 旧拷贝道路场景不可靠，道路相关列应先核对是否来自新的 SILAB 计算结果。
+- [vehicle原始道路信号与固定道路标签要区分](project_vehicle_road_signals_vs_fixed_labels_20260413.md) — `zx1|lanecurvatureXY` 等是实车过程道路数据，旧模板残留风险优先看 fixed labels。
+- [Codex CLI 先查本地路径](feedback_codex_cli_path_first.md) — 提到 Codex 协作时先检查本地 CLI 是否可用及其路径，再决定调用方式。
+- [输出术语要有稳定中文别名](feedback_outputs_need_plain_chinese_aliases.md) — 不想每次都加长解释，优先统一中文叫法、短结论和按需解释入口。

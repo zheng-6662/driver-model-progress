@@ -7,7 +7,8 @@
 3. Read [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md).
 4. Read [RUN_INDEX.md](RUN_INDEX.md).
 5. Read [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md).
-6. Open only the run cards needed to support your proposed next plan.
+6. When an earlier design decision needs reconstruction, read [Claude history index](claude_analysis/CLAUDE_ANALYSIS_INDEX_CN.md) and then open only the relevant raw JSONL or extracted conclusion.
+7. Open only the run cards needed to support your proposed next plan.
 
 Do not infer current status from an older run. Do not treat a diagnostic result as a validated model gain.
 
