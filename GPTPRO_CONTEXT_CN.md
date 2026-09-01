@@ -3,10 +3,11 @@
 ## Required reading order
 
 1. Read this file completely.
-2. Read [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md).
-3. Read [RUN_INDEX.md](RUN_INDEX.md).
-4. Read [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md).
-5. Open only the run cards needed to support your proposed next plan.
+2. Read [PROJECT_BACKGROUND_CN.md](PROJECT_BACKGROUND_CN.md).
+3. Read [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md).
+4. Read [RUN_INDEX.md](RUN_INDEX.md).
+5. Read [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md).
+6. Open only the run cards needed to support your proposed next plan.
 
 Do not infer current status from an older run. Do not treat a diagnostic result as a validated model gain.
 
