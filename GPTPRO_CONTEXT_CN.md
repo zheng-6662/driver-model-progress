@@ -8,7 +8,7 @@
 3. 阅读 [CURRENT_STATUS_CN.md](CURRENT_STATUS_CN.md)。
 4. 阅读 [AUDIT_INDEX.md](AUDIT_INDEX.md) 和当前多动作审计的01—10号报告。
 5. 需要追溯历史转向实验时，再阅读 [RUN_INDEX.md](RUN_INDEX.md) 和对应 Run 卡。
-6. 最后阅读 [REQUEST_TO_GPTPRO_CN.md](REQUEST_TO_GPTPRO_CN.md)。
+6. 最后阅读 [REQUEST_TO_GPTPRO_V2_CN.md](REQUEST_TO_GPTPRO_V2_CN.md)。
 
 不要从旧 Run 推断当前总体目标。不要把诊断性统计、旧子任务平均指标或模型机制信号写成新总体任务的已验证收益。
 
