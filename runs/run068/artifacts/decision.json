@@ -1,0 +1,50 @@
+{
+  "contract_id": "RUN68_PHYSIO_INTERVAL_CALIBRATION_V1_20260830",
+  "status": "TRAINING_SIDE_INTERVAL_SCREEN_COMPLETE",
+  "advance_to_outer": false,
+  "outer_test_opened": false,
+  "physiology_interval_gate_pass": false,
+  "failure_action": "FINAL_NO_GO_PHYSIOLOGY_MEAN_AND_UNCERTAINTY_STOP",
+  "coverage_target": 0.8,
+  "center_identity": true,
+  "inactive_interval_identity": true,
+  "latency_p95_ms": 0.9833599999999991,
+  "comparison_details": {
+    "U_V": {
+      "coverage_deficit": -0.0016752950311267334,
+      "width_relative_improvement": -0.02831815409715066,
+      "interval_score_relative_improvement": -0.013074381232359933,
+      "selective_tail_mae_relative_improvement": 0.003005168550336279,
+      "risk_coverage_auc_relative_improvement": 0.005035706272462526,
+      "bootstrap_width_ratio_upper": 1.053640368757923,
+      "subjects_width_narrower": 7,
+      "subjects_interval_score_better": 6,
+      "worst_stratum_interval_score_relative_harm": 0.020677728374476345
+    },
+    "U_VQ": {
+      "coverage_deficit": -0.00021893539498896164,
+      "width_relative_improvement": -0.024427533537083157,
+      "interval_score_relative_improvement": -0.011163566006492598,
+      "selective_tail_mae_relative_improvement": 0.004365782831971754,
+      "risk_coverage_auc_relative_improvement": 0.005988521091678023,
+      "bootstrap_width_ratio_upper": 1.0486895871952864,
+      "subjects_width_narrower": 6,
+      "subjects_interval_score_better": 4,
+      "worst_stratum_interval_score_relative_harm": 0.014743347968379172
+    },
+    "U_Vshift": {
+      "coverage_deficit": -0.0010695377477842882,
+      "width_relative_improvement": -0.010036838533392434,
+      "interval_score_relative_improvement": -0.002493491575237261,
+      "selective_tail_mae_relative_improvement": 0.006575124513806818,
+      "risk_coverage_auc_relative_improvement": 0.0074083814445757845,
+      "bootstrap_width_ratio_upper": 1.0260664416235745,
+      "subjects_width_narrower": 10,
+      "subjects_interval_score_better": 9,
+      "worst_stratum_interval_score_relative_harm": 0.013976387109883692
+    }
+  },
+  "evidence_status": "same_P_full_training_side_meta_validation_only_not_independent_confirmation",
+  "scientific_boundary": "A pass supports only physiology-assisted uncertainty calibration at t0+0.4; the rolling-V mean is unchanged and no mean-prediction gain may be claimed.",
+  "elapsed_seconds": 21.82658052444458
+}

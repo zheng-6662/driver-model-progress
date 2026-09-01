@@ -1,0 +1,32 @@
+{
+  "contract_id": "RUN67_ASYNCHRONOUS_PHYSIO_UPDATE_V1_20260830",
+  "status": "TRAINING_SIDE_STAGED_SCREEN_COMPLETE",
+  "advance_to_outer": false,
+  "stage_a": {
+    "status": "stage_a_complete",
+    "gate_a_pass": true,
+    "pair_gates_pass": true,
+    "protected_strata_pass": true,
+    "latency_pass": true,
+    "latency_p95_ms": 0.5033,
+    "latency_limit_ms": 50.0,
+    "physiology_cache_loaded": false,
+    "physiology_fit_or_evaluation_started": false,
+    "outer_test_opened": false
+  },
+  "stage_b": {
+    "status": "stage_b_complete",
+    "gate_b_pass": false,
+    "pair_gates_pass": false,
+    "protected_strata_pass": false,
+    "missing_physio_exact_identity": true,
+    "latency_pass": true,
+    "latency_p95_ms": 0.6235999999999999,
+    "latency_limit_ms": 50.0,
+    "outer_test_opened": false
+  },
+  "physiology_cache_loaded": true,
+  "outer_test_opened": false,
+  "evidence_status": "same_P_full_training_side_meta_validation_only_not_independent_confirmation",
+  "elapsed_seconds": 14.230801105499268
+}

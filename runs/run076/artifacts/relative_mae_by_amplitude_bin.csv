@@ -1,0 +1,9 @@
+model,amplitude_bin,event_count,subject_macro_relative_mae
+B_all3_without_rates_old_training,20_30,670,0.3372888685390263
+B_all3_without_rates_old_training,30_45,1013,0.35085475656487186
+B_all3_without_rates_old_training,45_70,443,0.342368539539411
+B_all3_without_rates_old_training,ge70,96,0.31978261122993373
+B_all3_without_rates_augmented_training,20_30,670,0.34560086060346507
+B_all3_without_rates_augmented_training,30_45,1013,0.361404569912055
+B_all3_without_rates_augmented_training,45_70,443,0.3499183386675119
+B_all3_without_rates_augmented_training,ge70,96,0.33630928959963863

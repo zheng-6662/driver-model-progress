@@ -1,0 +1,48 @@
+{
+  "contract_id": "RUN58_ROAD_PREVIEW_INCREMENT_V1_20260828",
+  "scientific_status": "BLOCKED_ANCHOR_OUTSIDE_TOLERANCE",
+  "anchor_pass": false,
+  "anchor_checks": {
+    "pooled_event_mae": {
+      "pass": false,
+      "observed": 13.609838896901168,
+      "target": 13.0214,
+      "difference": 0.5884388969011685,
+      "tolerance": 0.001
+    },
+    "relative_error_20_30": {
+      "pass": true,
+      "observed": 0.34947550306012204,
+      "target": 0.348,
+      "difference": 0.0014755030601220631,
+      "tolerance": 0.005
+    },
+    "relative_error_30_45": {
+      "pass": true,
+      "observed": 0.3609821045403383,
+      "target": 0.362,
+      "difference": -0.0010178954596616885,
+      "tolerance": 0.005
+    },
+    "relative_error_45_70": {
+      "pass": true,
+      "observed": 0.36992282810886123,
+      "target": 0.371,
+      "difference": -0.0010771718911387618,
+      "tolerance": 0.005
+    },
+    "relative_error_ge70": {
+      "pass": false,
+      "observed": 0.35506743995692475,
+      "target": 0.349,
+      "difference": 0.0060674399569247695,
+      "tolerance": 0.005
+    }
+  },
+  "road_preview_extraction_ran": false,
+  "preview_model_ran": false,
+  "hold_baseline_ran": false,
+  "paired_bootstrap_ran": false,
+  "stopped_after_anchor": true,
+  "runtime_seconds": 444.42101407051086
+}

@@ -1,0 +1,19 @@
+# Never publish raw or high-volume research data
+raw/
+cache/
+logs/
+predictions/
+checkpoints/
+*.npz
+*.npy
+*.pth
+*.pt
+*.ckpt
+*.fif
+*.set
+*.mat
+*.mp4
+*.zip
+.env
+*.key
+*.pem

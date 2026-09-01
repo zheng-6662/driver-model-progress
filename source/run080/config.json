@@ -1,0 +1,39 @@
+{
+  "run_id": "RUN80_CLEAN_PHYSIO_AB_V1_20260831",
+  "event_table": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run78_august_subject_rescreen_20260831\\run_1\\tables\\screened_events.csv",
+  "file_table": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run78_august_subject_rescreen_20260831\\run_1\\tables\\file_summary.csv",
+  "clean_physio_table": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run79_august_physio_preprocessing_20260831\\run_1\\tables\\event_physio_features.csv",
+  "models": [
+    "V_vehicle",
+    "VP_old16",
+    "VP_clean16"
+  ],
+  "outer_split": {
+    "type": "subject_disjoint_greedy_balanced_5fold",
+    "folds": 5
+  },
+  "regressor": {
+    "type": "ExtraTreesRegressor",
+    "n_estimators": 300,
+    "min_samples_leaf": 2,
+    "max_features": 0.5,
+    "n_jobs": 8,
+    "random_seed_base": 20260831
+  },
+  "missing_encoding": {
+    "vehicle": "training_fold_nanmedian",
+    "physiology": "training_fold_nanmedian_plus_16_missing_indicators"
+  },
+  "bootstrap": {
+    "unit": "subject",
+    "draws": 2000,
+    "seed": 20260831
+  },
+  "gates": {
+    "subject_macro_improvement_deg_min": 0.05,
+    "bootstrap_ci_lower_must_exceed_zero": true,
+    "positive_outer_folds_min": 4,
+    "maximum_amplitude_relative_regression": 0.01
+  },
+  "evidence_boundary": "This run tests whether Run79 preprocessing improves a fixed ExtraTrees physiology increment on the August cohort. It does not establish causal physiological mechanisms or external generalization."
+}

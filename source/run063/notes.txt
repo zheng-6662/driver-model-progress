@@ -1,0 +1,24 @@
+Run63 protected residual and soft gating experiment
+
+Purpose
+-------
+Test two pre-frozen second-stage combinations on P_full=2323 without changing the raw inputs, target, outer subject folds, Run59 floor denominator, or amplitude reporting contract.
+
+Models
+------
+1. B_all3: persisted equal average of Run60 M2/M3/M4 outer OOF curves.
+2. R_lowrank_residual: B_all3 plus a protected low-rank residual correction. Candidate selection may choose exact alpha=0 fallback.
+3. G_soft_expert_gate: event-wise soft weights over M2/M3/M4 based on predicted expert losses, shrunk toward equal weights. Candidate selection may choose exact equal-weight fallback.
+
+What the experiment is meant to show
+-------------------------------------
+Whether the large non-deployable per-event oracle complementarity and the low-dimensional B_all3 residual geometry contain train-side-identifiable information after strict outer-subject isolation.
+
+Evidence boundary
+-----------------
+This is same-population developmental OOF. It is not independent confirmation. The outer test is used once per outer context and never for candidate selection. No verify_*.py file is read, run, or modified.
+
+Pre-result frozen state
+-----------------------
+Search spaces and decision gates are in config.json. They must not be changed after any Run63 outer result is produced.
+

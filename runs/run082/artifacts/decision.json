@@ -1,0 +1,115 @@
+{
+  "run_id": "RUN82_LGRS_SEQUENCE_MODEL_V1_20260831",
+  "status": "LGRS_NOT_EFFECTIVE",
+  "events": 2598,
+  "subjects": 38,
+  "cache": {
+    "events": 2598,
+    "subjects": 38,
+    "recordings": 190,
+    "fold_event_counts": {
+      "1": 469,
+      "2": 517,
+      "3": 492,
+      "4": 568,
+      "5": 552
+    },
+    "fold_subject_counts": {
+      "1": 6,
+      "2": 8,
+      "3": 8,
+      "4": 8,
+      "5": 8
+    },
+    "anchor": {
+      "status": "PASS",
+      "new_events": 275,
+      "public_148_events": 148,
+      "summary_feature_count": 134,
+      "max_abs_diff_all_275": 2.842170943040401e-14,
+      "max_abs_diff_public_148": 2.842170943040401e-14,
+      "maximum_raw_support_minus_release_s": 0.0,
+      "sequence_anchor_boundary": "Run76 did not persist 101-point August sequences. Run82 therefore uses the identical Run57 causal_hold path and requires exact reproduction of the persisted 134D summaries for public 148 and all 275 events."
+    },
+    "cache_path": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run82_lgrs_sequence_model_20260831\\run_2\\cache\\combined_common_sequence.npz"
+  },
+  "comparisons": {
+    "LGRS_vs_Role_TCN": {
+      "comparison": "LGRS_vs_Role_TCN",
+      "subject_macro_gain_deg": 0.5225596176950555,
+      "bootstrap_ci_lower_deg": 0.044337797164917,
+      "bootstrap_ci_upper_deg": 1.002259526127263,
+      "positive_outer_fold_count": 5,
+      "improved_subject_count": 26,
+      "harmed_subject_count": 12,
+      "amplitude_changes": {
+        "20_30": {
+          "comparator": 0.48974746704495825,
+          "candidate": 0.46472719532495294,
+          "change": -0.025020271720005316
+        },
+        "30_45": {
+          "comparator": 0.4189170328059255,
+          "candidate": 0.4014437188724618,
+          "change": -0.01747331393346374
+        },
+        "45_70": {
+          "comparator": 0.36444633084479044,
+          "candidate": 0.3703484564646267,
+          "change": 0.005902125619836274
+        },
+        "ge70": {
+          "comparator": 0.32570737946875256,
+          "candidate": 0.312918776770816,
+          "change": -0.01278860269793658
+        }
+      },
+      "gates": {
+        "subject_macro_gain": true,
+        "bootstrap_ci_lower": true,
+        "positive_outer_folds": true,
+        "amplitude_protection": true
+      },
+      "all_gates_pass": true
+    },
+    "LGRS_vs_ExtraTrees": {
+      "comparison": "LGRS_vs_ExtraTrees_134D",
+      "subject_macro_gain_deg": -3.4287158313550448,
+      "bootstrap_ci_lower_deg": -4.614203761753283,
+      "bootstrap_ci_upper_deg": -2.4021407083461175,
+      "positive_outer_fold_count": 0,
+      "improved_subject_count": 3,
+      "harmed_subject_count": 35,
+      "amplitude_changes": {
+        "20_30": {
+          "comparator": 0.4115870095712287,
+          "candidate": 0.46472719532495294,
+          "change": 0.053140185753724256
+        },
+        "30_45": {
+          "comparator": 0.3411341717640876,
+          "candidate": 0.4014437188724618,
+          "change": 0.06030954710837416
+        },
+        "45_70": {
+          "comparator": 0.2929224647961314,
+          "candidate": 0.3703484564646267,
+          "change": 0.07742599166849534
+        },
+        "ge70": {
+          "comparator": 0.23692094418933826,
+          "candidate": 0.312918776770816,
+          "change": 0.07599783258147771
+        }
+      },
+      "gates": {
+        "subject_macro_gain": false,
+        "bootstrap_ci_lower": false,
+        "positive_outer_folds": false,
+        "amplitude_protection": false
+      },
+      "all_gates_pass": false
+    }
+  },
+  "evidence_boundary": "Run82 keeps the release-time 20-point task. No release-post observation, physiology, style, subject ID, teacher, or future target enters the inputs."
+}

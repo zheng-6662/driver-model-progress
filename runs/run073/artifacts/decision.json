@@ -1,0 +1,145 @@
+{
+  "contract_id": "RUN73_EYE_TRACKING_INCREMENT_V1_20260830",
+  "scientific_status": "NO_EFFECTIVE_EYE_TRACKING_INCREMENT_FINAL",
+  "eye_state_increment_supported": false,
+  "population": {
+    "events": 2323,
+    "subjects": 18,
+    "zyl_included": false,
+    "outer_fold_counts": {
+      "1": 352,
+      "2": 471,
+      "3": 435,
+      "4": 539,
+      "5": 526
+    }
+  },
+  "eye": {
+    "video_used": false,
+    "matched_recordings": 68,
+    "all_pfull_recordings": 85,
+    "eye_available_events": 1857,
+    "pupil_available_events": 1826,
+    "gaze_available_events": 1513,
+    "all_events_retained": true,
+    "future_eye_sample_count": 0,
+    "shift_control_changed_event_count": 2321
+  },
+  "baseline_anchor": {
+    "max_B_all3_reconstruction_abs_diff_deg": 1.4210854715202004e-14,
+    "max_truth_abs_diff_deg": 2.842170943040401e-14
+  },
+  "comparisons": [
+    {
+      "comparison": "B_all3_eye_true_vs_B_all3",
+      "subject_macro_improvement_deg": -0.009435068237772922,
+      "bootstrap_ci_lower_deg": -0.03297352376784532,
+      "bootstrap_ci_upper_deg": 0.013469083444161185,
+      "bootstrap_repetitions": 2000,
+      "positive_outer_fold_count": 1,
+      "outer_fold_improvements_deg": {
+        "1": -0.0235039507098628,
+        "2": 0.010379893594850826,
+        "3": -0.014115724270679832,
+        "4": -0.01836926287609208,
+        "5": -0.008600738163125659
+      },
+      "improved_subject_count": 9,
+      "harmed_subject_count": 9,
+      "top_contributing_subject": "xst",
+      "top_subject_improvement_deg": 0.11308282765489579,
+      "leave_top_subject_improvement_deg": -0.016642003290282845,
+      "event_improved_fraction": 0.49978476108480413,
+      "event_worsened_fraction": 0.5002152389151958,
+      "event_tied_fraction": 0.0,
+      "worst_subject_regression_deg": 0.12339031460459057
+    },
+    {
+      "comparison": "B_all3_eye_true_vs_shift_control",
+      "subject_macro_improvement_deg": 0.01583545126047372,
+      "bootstrap_ci_lower_deg": -0.0159956169871107,
+      "bootstrap_ci_upper_deg": 0.044809661700509554,
+      "bootstrap_repetitions": 2000,
+      "positive_outer_fold_count": 4,
+      "outer_fold_improvements_deg": {
+        "1": 0.020370190674375628,
+        "2": 0.06034935369238064,
+        "3": 0.0068612065917402106,
+        "4": -0.028738379269845845,
+        "5": 0.0226022543206689
+      },
+      "improved_subject_count": 13,
+      "harmed_subject_count": 5,
+      "top_contributing_subject": "xst",
+      "top_subject_improvement_deg": 0.17536937408221398,
+      "leave_top_subject_improvement_deg": 0.006451102859194878,
+      "event_improved_fraction": 0.524321997417133,
+      "event_worsened_fraction": 0.47567800258286697,
+      "event_tied_fraction": 0.0,
+      "worst_subject_regression_deg": 0.18311431295636657
+    },
+    {
+      "comparison": "shift_control_vs_B_all3",
+      "subject_macro_improvement_deg": -0.025270519498246637,
+      "bootstrap_ci_lower_deg": -0.04025553918732312,
+      "bootstrap_ci_upper_deg": -0.00845815910294278,
+      "bootstrap_repetitions": 2000,
+      "positive_outer_fold_count": 1,
+      "outer_fold_improvements_deg": {
+        "1": -0.043874141384238424,
+        "2": -0.04996946009752982,
+        "3": -0.020976930862420043,
+        "4": 0.010369116393753767,
+        "5": -0.031202992483794562
+      },
+      "improved_subject_count": 3,
+      "harmed_subject_count": 15,
+      "top_contributing_subject": "jy",
+      "top_subject_improvement_deg": 0.059723998351776,
+      "leave_top_subject_improvement_deg": -0.030270197018836206,
+      "event_improved_fraction": 0.4877313818338356,
+      "event_worsened_fraction": 0.5122686181661644,
+      "event_tied_fraction": 0.0,
+      "worst_subject_regression_deg": 0.07786841440537753
+    }
+  ],
+  "amplitude_checks": {
+    "20_30": {
+      "B_all3": 0.33736711446240303,
+      "B_all3_eye_true": 0.33816826190458105,
+      "change_true_minus_B_all3": 0.0008011474421780185,
+      "pass": true
+    },
+    "30_45": {
+      "B_all3": 0.34788182792451844,
+      "B_all3_eye_true": 0.34760112296151546,
+      "change_true_minus_B_all3": -0.00028070496300297565,
+      "pass": true
+    },
+    "45_70": {
+      "B_all3": 0.3426601356387313,
+      "B_all3_eye_true": 0.3419532672312184,
+      "change_true_minus_B_all3": -0.0007068684075129394,
+      "pass": true
+    },
+    "ge70": {
+      "B_all3": 0.31559092997347765,
+      "B_all3_eye_true": 0.3177399890864602,
+      "change_true_minus_B_all3": 0.002149059112982521,
+      "pass": true
+    }
+  },
+  "gates": {
+    "a_true_vs_B_all3_gain_at_least_0_05_deg": false,
+    "b_true_vs_B_all3_bootstrap_ci_lower_above_zero": false,
+    "c_true_vs_shift_gain_at_least_0_02_deg": false,
+    "d_true_vs_shift_bootstrap_ci_lower_above_zero": false,
+    "e_positive_outer_folds_at_least_4": false,
+    "f_leave_top_subject_improvement_positive": false,
+    "g_no_ge20_amplitude_relative_regression_over_0_01": true
+  },
+  "same_population_developmental_oof": true,
+  "external_confirmation": false,
+  "evidence_boundary": "本轮是同一P_full=2323、同一18位被试上的发展性OOF，不是外部确认。视频未进入模型。若真实眼动不优于recording内错位对照，不能把改善解释为事件前眼动状态。",
+  "elapsed_seconds": 48.83898997306824
+}

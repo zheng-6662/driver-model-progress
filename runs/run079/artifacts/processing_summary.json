@@ -1,0 +1,22 @@
+{
+  "run_id": "RUN79_AUGUST_PHYSIO_PREPROCESSING_V1_20260831",
+  "status": "PREPROCESSING_COMPLETE",
+  "source_subject_directories": 29,
+  "physio_subjects": 27,
+  "physio_recordings": 188,
+  "source_size_gb": 7.567427677102387,
+  "processed_recordings": 188,
+  "channel_usable_recordings": {
+    "ECG": 184,
+    "EMG": 184,
+    "EDA": 184,
+    "RESP": 184
+  },
+  "event_rows": 275,
+  "events_with_processed_source": 265,
+  "events_with_long_baseline": 214,
+  "bad_timestamp_rows": 3876,
+  "qc_example_figures": 27,
+  "elapsed_seconds": 185.50612354278564,
+  "evidence_boundary": "Run79 only preprocesses and summarizes physiology. It does not train or select a prediction model. Event features use samples at or before prediction_anchor_time."
+}

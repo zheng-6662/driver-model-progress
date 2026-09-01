@@ -1,0 +1,51 @@
+{
+  "status": "PHYSIO_INCREMENT_NOT_EFFECTIVE",
+  "events": 148,
+  "subjects": 18,
+  "physio_feature_count": 16,
+  "bad_physio_timestamp_rows": 3876,
+  "comparison": {
+    "subject_macro_improvement_deg": -0.09623038107920465,
+    "bootstrap_ci_lower_deg": -0.3788016574301747,
+    "bootstrap_ci_upper_deg": 0.19448650014722457,
+    "positive_outer_fold_count": 3,
+    "outer_fold_improvement_deg": {
+      "1": -0.5220234065150487,
+      "2": -0.6091815419734823,
+      "3": 0.27595825420018194,
+      "4": 0.031067784754744032,
+      "5": 0.32962590659846747
+    },
+    "improved_subject_count": 9,
+    "harmed_subject_count": 9,
+    "event_worsened_fraction": 0.5
+  },
+  "amplitude_changes": {
+    "20_30": {
+      "vehicle": 0.7846779036070106,
+      "vehicle_physio": 0.8013330979425122,
+      "change": 0.016655194335501555
+    },
+    "30_45": {
+      "vehicle": 0.4050460980186132,
+      "vehicle_physio": 0.3906075568589643,
+      "change": -0.014438541159648877
+    },
+    "45_70": {
+      "vehicle": 0.18711561830662968,
+      "vehicle_physio": 0.19025069246420503,
+      "change": 0.003135074157575357
+    },
+    "ge70": {
+      "vehicle": 0.23135566579986694,
+      "vehicle_physio": 0.23349813263046248,
+      "change": 0.0021424668305955463
+    }
+  },
+  "gates": {
+    "subject_macro_improvement_at_least_0_05_deg": false,
+    "bootstrap_ci_lower_above_zero": false,
+    "positive_outer_folds_at_least_4": false,
+    "no_amplitude_relative_regression_over_0_01": false
+  }
+}

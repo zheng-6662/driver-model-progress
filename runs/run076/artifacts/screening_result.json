@@ -1,0 +1,11 @@
+{
+  "subject_directories": 21,
+  "subjects_with_vehicle_files": 18,
+  "subjects_with_eligible_events": 18,
+  "selected_vehicle_files": 98,
+  "detected_events": 284,
+  "eligible_events": 148,
+  "eligible_events_with_physio_2s": 138,
+  "eligible_events_with_physio_30s": 135,
+  "bad_physio_timestamp_rows": 3876
+}

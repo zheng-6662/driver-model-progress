@@ -1,0 +1,97 @@
+{
+  "status": "inner_only_recent_style_screen_complete",
+  "outer_test_opened": false,
+  "best_recent_style": {
+    "candidate": "G_R_recent_style_ridge",
+    "mean_gain": 0.019550970299699513,
+    "min_gain": -0.00408107060380455,
+    "positive_outer_count": 4,
+    "gate_pass_count": 2,
+    "mean_ci_lower": 0.0008526714905711917,
+    "mean_leave_top": 0.01390926263630329,
+    "gain_over_D_same_model": -0.0006192447067000437
+  },
+  "advance_recent_style": false,
+  "all_candidates": [
+    {
+      "candidate": "G_D_ridge",
+      "mean_gain": 0.020170215006399556,
+      "min_gain": -0.0022358275762110074,
+      "positive_outer_count": 4,
+      "gate_pass_count": 1,
+      "mean_ci_lower": 0.001992337790653966,
+      "mean_leave_top": 0.014784136661607527,
+      "gain_over_D_same_model": 0.0
+    },
+    {
+      "candidate": "G_R_recent_style_ridge",
+      "mean_gain": 0.019550970299699513,
+      "min_gain": -0.00408107060380455,
+      "positive_outer_count": 4,
+      "gate_pass_count": 2,
+      "mean_ci_lower": 0.0008526714905711917,
+      "mean_leave_top": 0.01390926263630329,
+      "gain_over_D_same_model": -0.0006192447067000437
+    },
+    {
+      "candidate": "G_R_recent_style_extratrees",
+      "mean_gain": 0.019223934490205884,
+      "min_gain": -0.003366886479364974,
+      "positive_outer_count": 4,
+      "gate_pass_count": 3,
+      "mean_ci_lower": 0.0008453508194344813,
+      "mean_leave_top": 0.013589933057710207,
+      "gain_over_D_same_model": 0.002319676314939241
+    },
+    {
+      "candidate": "G_PR_physio_recent_extratrees",
+      "mean_gain": 0.018262596060301402,
+      "min_gain": -0.0027375400074557887,
+      "positive_outer_count": 4,
+      "gate_pass_count": 3,
+      "mean_ci_lower": 0.0013093318696596984,
+      "mean_leave_top": 0.012498768387202791,
+      "gain_over_D_same_model": 0.0013583378850347584
+    },
+    {
+      "candidate": "G_P_physio_ridge",
+      "mean_gain": 0.017829678068054335,
+      "min_gain": -0.002664928389969821,
+      "positive_outer_count": 4,
+      "gate_pass_count": 2,
+      "mean_ci_lower": -0.00280772820532471,
+      "mean_leave_top": 0.011702743991361644,
+      "gain_over_D_same_model": -0.0023405369383452217
+    },
+    {
+      "candidate": "G_D_extratrees",
+      "mean_gain": 0.016904258175266643,
+      "min_gain": -0.004291884994054307,
+      "positive_outer_count": 4,
+      "gate_pass_count": 2,
+      "mean_ci_lower": -0.0003992001695176245,
+      "mean_leave_top": 0.010921747011529747,
+      "gain_over_D_same_model": 0.0
+    },
+    {
+      "candidate": "G_P_physio_extratrees",
+      "mean_gain": 0.016461109236826678,
+      "min_gain": -0.0043595503301990645,
+      "positive_outer_count": 4,
+      "gate_pass_count": 2,
+      "mean_ci_lower": -0.0004166770329393117,
+      "mean_leave_top": 0.010986869477798734,
+      "gain_over_D_same_model": -0.0004431489384399655
+    },
+    {
+      "candidate": "G_PR_physio_recent_ridge",
+      "mean_gain": 0.016015951923961297,
+      "min_gain": -0.0034345850873668737,
+      "positive_outer_count": 4,
+      "gate_pass_count": 2,
+      "mean_ci_lower": -0.005875546568936069,
+      "mean_leave_top": 0.00970341802438519,
+      "gain_over_D_same_model": -0.004154263082438259
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+comparison,subject_macro_improvement_deg,bootstrap_ci_lower_deg,bootstrap_ci_upper_deg,positive_outer_fold_count,improved_subject_count,harmed_subject_count,event_worsened_fraction,all_gates_pass
+VP_clean16_vs_V_vehicle,-0.1578298409751211,-0.33295593562872566,0.02374767990900774,0,9,17,0.5309090909090909,False
+VP_clean16_vs_VP_old16,-0.12053430096080968,-0.32080500820556235,0.07615130014451198,2,13,13,0.5163636363636364,False
+VP_old16_vs_V_vehicle,-0.037295540014311415,-0.279447513905435,0.2098266233892517,2,12,14,0.5490909090909091,False

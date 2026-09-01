@@ -1,0 +1,230 @@
+{
+  "status": "strict_inner_multiscale_distillation_complete",
+  "outer_test_opened": false,
+  "advance_to_outer": false,
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 2060",
+  "arm_summary": [
+    {
+      "arm": "T_privileged",
+      "mean_gain_deg": 0.214071178472166,
+      "min_gain_deg": 0.11999137030361837,
+      "positive_outer_count": 5,
+      "gate_pass_count": 4,
+      "mean_ci_lower": 0.04692617008776858,
+      "mean_leave_top": 0.16532875795757346,
+      "mean_event_improved_fraction": 0.5295742618589981,
+      "mean_selected_alpha": 0.25
+    },
+    {
+      "arm": "VS_style",
+      "mean_gain_deg": 0.2111511649030628,
+      "min_gain_deg": 0.1022640746589272,
+      "positive_outer_count": 5,
+      "gate_pass_count": 5,
+      "mean_ci_lower": 0.08661089596655405,
+      "mean_leave_top": 0.18059424443254007,
+      "mean_event_improved_fraction": 0.5454621882889523,
+      "mean_selected_alpha": 0.22000000000000003
+    },
+    {
+      "arm": "V_vehicle",
+      "mean_gain_deg": 0.2042158365120518,
+      "min_gain_deg": 0.14028016079321123,
+      "positive_outer_count": 5,
+      "gate_pass_count": 5,
+      "mean_ci_lower": 0.061919830685092936,
+      "mean_leave_top": 0.16737037918764397,
+      "mean_event_improved_fraction": 0.5495287453662545,
+      "mean_selected_alpha": 0.25
+    },
+    {
+      "arm": "VP_physio",
+      "mean_gain_deg": 0.2013895489144845,
+      "min_gain_deg": 0.10463524428579822,
+      "positive_outer_count": 5,
+      "gate_pass_count": 4,
+      "mean_ci_lower": 0.050490105941621045,
+      "mean_leave_top": 0.15949747288254507,
+      "mean_event_improved_fraction": 0.5391429006305065,
+      "mean_selected_alpha": 0.25
+    },
+    {
+      "arm": "VP_shadow",
+      "mean_gain_deg": 0.18652871973663718,
+      "min_gain_deg": 0.15033674984879689,
+      "positive_outer_count": 5,
+      "gate_pass_count": 5,
+      "mean_ci_lower": 0.049541398480895296,
+      "mean_leave_top": 0.1498811119383466,
+      "mean_event_improved_fraction": 0.5368263146817533,
+      "mean_selected_alpha": 0.25
+    },
+    {
+      "arm": "VPS_KD",
+      "mean_gain_deg": 0.1493062358009346,
+      "min_gain_deg": 0.11063801142999592,
+      "positive_outer_count": 5,
+      "gate_pass_count": 3,
+      "mean_ci_lower": 0.004493770436747233,
+      "mean_leave_top": 0.1122622290506979,
+      "mean_event_improved_fraction": 0.5297753962412329,
+      "mean_selected_alpha": 0.22000000000000003
+    },
+    {
+      "arm": "VS_shadow",
+      "mean_gain_deg": 0.13079483607824274,
+      "min_gain_deg": 0.08047077756804567,
+      "positive_outer_count": 5,
+      "gate_pass_count": 3,
+      "mean_ci_lower": 0.002741805577929771,
+      "mean_leave_top": 0.09154583151278357,
+      "mean_event_improved_fraction": 0.5214100232219999,
+      "mean_selected_alpha": 0.22000000000000003
+    },
+    {
+      "arm": "VPS_point",
+      "mean_gain_deg": 0.13032448723513854,
+      "min_gain_deg": 0.08320935989413401,
+      "positive_outer_count": 5,
+      "gate_pass_count": 1,
+      "mean_ci_lower": -0.04087444986451262,
+      "mean_leave_top": 0.08604470997040863,
+      "mean_event_improved_fraction": 0.5348795445538506,
+      "mean_selected_alpha": 0.22000000000000003
+    },
+    {
+      "arm": "VPS_joint",
+      "mean_gain_deg": 0.12652972709103627,
+      "min_gain_deg": 0.08250842234495792,
+      "positive_outer_count": 5,
+      "gate_pass_count": 2,
+      "mean_ci_lower": -0.021987734922872516,
+      "mean_leave_top": 0.09108267222296326,
+      "mean_event_improved_fraction": 0.5385527048053997,
+      "mean_selected_alpha": 0.19
+    },
+    {
+      "arm": "T_post_shadow",
+      "mean_gain_deg": 0.11045077574561421,
+      "min_gain_deg": 0.04942439694073565,
+      "positive_outer_count": 5,
+      "gate_pass_count": 1,
+      "mean_ci_lower": -0.01958635499648768,
+      "mean_leave_top": 0.08187141926789507,
+      "mean_event_improved_fraction": 0.531665056816431,
+      "mean_selected_alpha": 0.16
+    }
+  ],
+  "paired_gate_summary": [
+    {
+      "comparison": "Teacher_minus_post_shadow",
+      "mean_pair_gain_deg": 0.10362040272655179,
+      "min_pair_gain_deg": 0.04967237076579537,
+      "positive_outer_count": 5,
+      "pair_gate_pass_count": 3,
+      "mean_ci_lower": 0.013667268149052298,
+      "mean_leave_top": 0.07729258837659776
+    },
+    {
+      "comparison": "Teacher_minus_no_post",
+      "mean_pair_gain_deg": 0.08754145138112976,
+      "min_pair_gain_deg": 0.01947475491739478,
+      "positive_outer_count": 5,
+      "pair_gate_pass_count": 2,
+      "mean_ci_lower": -0.02481687832362951,
+      "mean_leave_top": 0.04993439192471537
+    },
+    {
+      "comparison": "VS_minus_shadow",
+      "mean_pair_gain_deg": 0.08035632882482008,
+      "min_pair_gain_deg": -0.029300879162176052,
+      "positive_outer_count": 4,
+      "pair_gate_pass_count": 2,
+      "mean_ci_lower": -0.038486336558021736,
+      "mean_leave_top": 0.04823473098487256
+    },
+    {
+      "comparison": "KD_minus_VPS",
+      "mean_pair_gain_deg": 0.022776508709898346,
+      "min_pair_gain_deg": -0.03270464214910719,
+      "positive_outer_count": 4,
+      "pair_gate_pass_count": 1,
+      "mean_ci_lower": -0.052581565332003144,
+      "mean_leave_top": 0.003906563805542075
+    },
+    {
+      "comparison": "VP_minus_shadow",
+      "mean_pair_gain_deg": 0.014860829177847302,
+      "min_pair_gain_deg": -0.07554478639513551,
+      "positive_outer_count": 3,
+      "pair_gate_pass_count": 1,
+      "mean_ci_lower": -0.06119210421117453,
+      "mean_leave_top": -0.00649004275311303
+    },
+    {
+      "comparison": "VS_minus_V",
+      "mean_pair_gain_deg": 0.00693532839101102,
+      "min_pair_gain_deg": -0.1072428171483466,
+      "positive_outer_count": 3,
+      "pair_gate_pass_count": 2,
+      "mean_ci_lower": -0.1106581170583552,
+      "mean_leave_top": -0.022036526429072608
+    },
+    {
+      "comparison": "VP_minus_V",
+      "mean_pair_gain_deg": -0.002826287597567319,
+      "min_pair_gain_deg": -0.06897462754015571,
+      "positive_outer_count": 3,
+      "pair_gate_pass_count": 0,
+      "mean_ci_lower": -0.08211148585625325,
+      "mean_leave_top": -0.023232572976024476
+    },
+    {
+      "comparison": "Multiscale_minus_point",
+      "mean_pair_gain_deg": -0.0037947601441022773,
+      "min_pair_gain_deg": -0.012901856062900332,
+      "positive_outer_count": 1,
+      "pair_gate_pass_count": 0,
+      "mean_ci_lower": -0.03997688247602364,
+      "mean_leave_top": -0.015004213384859638
+    },
+    {
+      "comparison": "VPS_minus_VP",
+      "mean_pair_gain_deg": -0.07485982182344822,
+      "min_pair_gain_deg": -0.21455447622251567,
+      "positive_outer_count": 1,
+      "pair_gate_pass_count": 0,
+      "mean_ci_lower": -0.210400445642316,
+      "mean_leave_top": -0.1115995382209487
+    },
+    {
+      "comparison": "VPS_minus_VS",
+      "mean_pair_gain_deg": -0.08462143781202655,
+      "min_pair_gain_deg": -0.19323617527459613,
+      "positive_outer_count": 1,
+      "pair_gate_pass_count": 0,
+      "mean_ci_lower": -0.19906848797677143,
+      "mean_leave_top": -0.11059538497747737
+    }
+  ],
+  "required_pair_gates": [
+    "VP_minus_V",
+    "VP_minus_shadow",
+    "VS_minus_V",
+    "VS_minus_shadow",
+    "VPS_minus_VP",
+    "VPS_minus_VS",
+    "KD_minus_VPS",
+    "Teacher_minus_no_post",
+    "Teacher_minus_post_shadow"
+  ],
+  "alpha_candidates": [
+    0.0,
+    0.1,
+    0.25
+  ],
+  "exact_fallback_available": true,
+  "elapsed_seconds": 7445.7817714214325,
+  "boundary": "Strict nested subject-disjoint base predictions. Post-event physiology is teacher-only. Modality claims require paired gains over vehicle and shuffled shadows."
+}

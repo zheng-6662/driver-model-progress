@@ -1,0 +1,52 @@
+{
+  "run_id": "RUN79_AUGUST_PHYSIO_PREPROCESSING_V1_20260831",
+  "source_root": "<AUGUST_RAW_ROOT>\\zssy_zx\\zssy_zx",
+  "event_table": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run78_august_subject_rescreen_20260831\\run_1\\tables\\screened_events.csv",
+  "native_grid_hz": 1000,
+  "filter_warmup_s": 5.0,
+  "channels": {
+    "ECG": {
+      "suffix": "|CH1-ECG",
+      "band_hz": [0.5, 40.0],
+      "notch_hz": 50.0,
+      "output_hz": 250
+    },
+    "EMG": {
+      "suffix": "|CH2-EMG",
+      "band_hz": [20.0, 200.0],
+      "notch_hz": 50.0,
+      "envelope_lowpass_hz": 5.0,
+      "output_hz": 500,
+      "envelope_output_hz": 100
+    },
+    "EDA": {
+      "suffix": "|CH3-EDA",
+      "lowpass_hz": 5.0,
+      "tonic_lowpass_hz": 0.05,
+      "output_hz": 20
+    },
+    "RESP": {
+      "suffix": "|CH4-RESP",
+      "band_hz": [0.05, 0.5],
+      "output_hz": 20
+    }
+  },
+  "event_windows_s": {
+    "emg_current": 2.0,
+    "eda_current": 30.0,
+    "eda_phasic": 15.0,
+    "ecg_current": 30.0,
+    "ecg_slope": 15.0,
+    "resp_current": 30.0,
+    "history_start": 120.0,
+    "history_end": 30.0,
+    "minimum_history_reference": 30.0
+  },
+  "quality": {
+    "minimum_recording_duration_s": 30.0,
+    "minimum_channel_coverage": 0.95,
+    "maximum_gap_s": 0.10,
+    "minimum_event_window_coverage": 0.80
+  },
+  "evidence_boundary": "Run79 only preprocesses and summarizes physiology. It does not train or select a prediction model. Event features use samples at or before prediction_anchor_time."
+}

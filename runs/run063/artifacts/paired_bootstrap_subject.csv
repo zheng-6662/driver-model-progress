@@ -1,0 +1,3 @@
+candidate_model,reference_model,dense_floor_ratio_improvement_estimate,dense_ci_lower,dense_ci_upper,subject_macro_mae_improvement_deg,mae_ci_lower_deg,mae_ci_upper_deg,top_contributing_subject,top_subject_dense_improvement,leave_top_subject_dense_improvement,repetitions,unit,seed
+R_lowrank_residual,B_all3,0.0003132910057028266,-0.0049928390221171915,0.006232077189889846,0.08534013014166603,0.030841383328047735,0.14883377602271516,txj,0.03792368668773394,-0.0018990852108872387,2000,subject,20262724
+G_soft_expert_gate,B_all3,0.0076752100489320746,0.0014756820738450573,0.014537197400778417,0.08797019624298415,0.04415388670695781,0.14062936627006692,zdq,0.04470438187710668,0.005497023470804156,2000,subject,20262710

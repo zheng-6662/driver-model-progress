@@ -1,0 +1,142 @@
+{
+  "contract_id": "RUN66_PHYSIO_VEHICLE_COUPLING_ADAPTER_V1_20260830",
+  "status": "training_side_meta_validation_complete",
+  "outer_test_opened": false,
+  "advance_to_outer": false,
+  "required_pair_gates_pass": false,
+  "protected_harm_gates_pass": false,
+  "required_pair_comparisons": [
+    "coupling_minus_B",
+    "coupling_minus_V",
+    "coupling_minus_shifted_physio"
+  ],
+  "diagnostic_pair_comparisons": [
+    "coupling_minus_quality_only",
+    "coupling_minus_vehicle_x_vehicle"
+  ],
+  "trust_candidates": [
+    0.0,
+    0.1,
+    0.25
+  ],
+  "missing_physiology_exact_fallback": true,
+  "sample_deletion": false,
+  "evidence_status": "same_P_full_training_side_meta_validation_only_not_independent_confirmation",
+  "pair_summary": [
+    {
+      "comparison": "coupling_minus_B",
+      "required_gate": true,
+      "positive_outer_context_count": 2,
+      "mean_outer_gain_deg": -0.048671703348815,
+      "subject_macro_gain_deg": -0.049054734801777036,
+      "bootstrap_ci_lower_deg": -0.2100775338807213,
+      "bootstrap_ci_upper_deg": 0.046267311952868956,
+      "leave_top_subject_gain_deg": -0.05951334640034235,
+      "subject_improved_count": 9,
+      "subject_worsened_count": 9,
+      "subject_count": 18,
+      "pair_gate_pass": false
+    },
+    {
+      "comparison": "coupling_minus_V",
+      "required_gate": true,
+      "positive_outer_context_count": 0,
+      "mean_outer_gain_deg": -0.06413341927329679,
+      "subject_macro_gain_deg": -0.06458588054501045,
+      "bootstrap_ci_lower_deg": -0.2081631132994811,
+      "bootstrap_ci_upper_deg": 0.012557628088962892,
+      "leave_top_subject_gain_deg": -0.07302497786372933,
+      "subject_improved_count": 6,
+      "subject_worsened_count": 3,
+      "subject_count": 18,
+      "pair_gate_pass": false
+    },
+    {
+      "comparison": "coupling_minus_shifted_physio",
+      "required_gate": true,
+      "positive_outer_context_count": 2,
+      "mean_outer_gain_deg": -0.06621199683985353,
+      "subject_macro_gain_deg": -0.06670310274380951,
+      "bootstrap_ci_lower_deg": -0.20835397841022776,
+      "bootstrap_ci_upper_deg": 0.008810931869950219,
+      "leave_top_subject_gain_deg": -0.07355322581241144,
+      "subject_improved_count": 8,
+      "subject_worsened_count": 7,
+      "subject_count": 18,
+      "pair_gate_pass": false
+    },
+    {
+      "comparison": "coupling_minus_quality_only",
+      "required_gate": false,
+      "positive_outer_context_count": 0,
+      "mean_outer_gain_deg": -0.06413341927329679,
+      "subject_macro_gain_deg": -0.06458588054501045,
+      "bootstrap_ci_lower_deg": -0.2070891870352484,
+      "bootstrap_ci_upper_deg": 0.013088295378941732,
+      "leave_top_subject_gain_deg": -0.07302497786372933,
+      "subject_improved_count": 6,
+      "subject_worsened_count": 3,
+      "subject_count": 18,
+      "pair_gate_pass": false
+    },
+    {
+      "comparison": "coupling_minus_vehicle_x_vehicle",
+      "required_gate": false,
+      "positive_outer_context_count": 0,
+      "mean_outer_gain_deg": -0.06497778017007443,
+      "subject_macro_gain_deg": -0.06549508618504134,
+      "bootstrap_ci_lower_deg": -0.2026114085671589,
+      "bootstrap_ci_upper_deg": 0.008306557899095774,
+      "leave_top_subject_gain_deg": -0.07260445183329214,
+      "subject_improved_count": 5,
+      "subject_worsened_count": 6,
+      "subject_count": 18,
+      "pair_gate_pass": false
+    }
+  ],
+  "harm_summary": [
+    {
+      "reference": "B_all3",
+      "stratum": "ordinary_causal",
+      "mean_outer_subject_macro_regression_deg": 0.06228852672592955,
+      "maximum_outer_subject_macro_regression_deg": 0.1364614821573842,
+      "harm_gate_pass": false
+    },
+    {
+      "reference": "B_all3",
+      "stratum": "road_reference_missing",
+      "mean_outer_subject_macro_regression_deg": -0.08394613522511299,
+      "maximum_outer_subject_macro_regression_deg": 0.017508734068328646,
+      "harm_gate_pass": true
+    },
+    {
+      "reference": "B_all3",
+      "stratum": "tail_points_16_20",
+      "mean_outer_subject_macro_regression_deg": 0.06254633560338406,
+      "maximum_outer_subject_macro_regression_deg": 0.19434998752297997,
+      "harm_gate_pass": false
+    },
+    {
+      "reference": "V_vehicle",
+      "stratum": "ordinary_causal",
+      "mean_outer_subject_macro_regression_deg": 0.07296155134564557,
+      "maximum_outer_subject_macro_regression_deg": 0.15027306039745966,
+      "harm_gate_pass": false
+    },
+    {
+      "reference": "V_vehicle",
+      "stratum": "road_reference_missing",
+      "mean_outer_subject_macro_regression_deg": -0.01223225863016666,
+      "maximum_outer_subject_macro_regression_deg": 0.0,
+      "harm_gate_pass": true
+    },
+    {
+      "reference": "V_vehicle",
+      "stratum": "tail_points_16_20",
+      "mean_outer_subject_macro_regression_deg": 0.10885728710108578,
+      "maximum_outer_subject_macro_regression_deg": 0.22164084270330722,
+      "harm_gate_pass": false
+    }
+  ],
+  "elapsed_seconds": 9.494574308395386
+}

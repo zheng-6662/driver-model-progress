@@ -1,0 +1,30 @@
+{
+  "contract_id": "RUN57_A_FULL_RELEASE_POPULATION_CAUSAL_BASELINE_V3_20260827",
+  "P0_regate_all_pass": true,
+  "population": {
+    "P_online_trigger": 2324,
+    "P_full": 2323,
+    "road_reference_valid": 2124,
+    "road_reference_missing": 199
+  },
+  "gpu_gate": {
+    "checks": {
+      "primary_vs_hold": true,
+      "primary_vs_linear": true,
+      "lt30_vs_hold": true,
+      "lt30_vs_linear": true,
+      "30_45_vs_hold": true,
+      "30_45_vs_linear": true,
+      "45_70_vs_hold": true,
+      "45_70_vs_linear": true,
+      "ge70_vs_hold": true,
+      "ge70_vs_linear": true
+    },
+    "pass": true
+  },
+  "transformer_ran": true,
+  "scientific_status": "A_cpu_complete_transformer_complete",
+  "M1_preview_authorized": false,
+  "Run57_B_authorized": false,
+  "runtime_seconds": 572.7356476783752
+}

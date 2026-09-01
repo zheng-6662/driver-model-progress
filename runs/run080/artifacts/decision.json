@@ -1,0 +1,157 @@
+{
+  "run_id": "RUN80_CLEAN_PHYSIO_AB_V1_20260831",
+  "status": "CLEAN_PHYSIO_INCREMENT_NOT_EFFECTIVE",
+  "events": 275,
+  "subjects": 26,
+  "vehicle_feature_count": 134,
+  "physio_feature_count": 16,
+  "physio_missing_indicator_count": 16,
+  "comparisons": {
+    "VP_clean16_vs_V_vehicle": {
+      "comparison": "VP_clean16_vs_V_vehicle",
+      "comparator": "V_vehicle",
+      "candidate": "VP_clean16",
+      "subject_macro_improvement_deg": -0.1578298409751211,
+      "bootstrap_ci_lower_deg": -0.33295593562872566,
+      "bootstrap_ci_upper_deg": 0.02374767990900774,
+      "positive_outer_fold_count": 0,
+      "outer_fold_improvement_deg": {
+        "1": -0.12006925998278106,
+        "2": -0.1081178228800832,
+        "3": -0.12109099422713172,
+        "4": -0.16791919982603506,
+        "5": -0.2388032173241387
+      },
+      "improved_subject_count": 9,
+      "harmed_subject_count": 17,
+      "event_worsened_fraction": 0.5309090909090909,
+      "amplitude_changes": {
+        "20_30": {
+          "comparator": 0.6677687230141914,
+          "candidate": 0.6905822739478973,
+          "change_candidate_minus_comparator": 0.02281355093370585
+        },
+        "30_45": {
+          "comparator": 0.37587245917433754,
+          "candidate": 0.3697838199138346,
+          "change_candidate_minus_comparator": -0.006088639260502959
+        },
+        "45_70": {
+          "comparator": 0.25372035771055396,
+          "candidate": 0.24917691036829376,
+          "change_candidate_minus_comparator": -0.004543447342260198
+        },
+        "ge70": {
+          "comparator": 0.20764754327276927,
+          "candidate": 0.2114984714795359,
+          "change_candidate_minus_comparator": 0.003850928206766635
+        }
+      },
+      "gates": {
+        "subject_macro_improvement_at_least_0_05_deg": false,
+        "bootstrap_ci_lower_above_zero": false,
+        "positive_outer_folds_at_least_4": false,
+        "no_amplitude_relative_regression_over_0_01": false
+      },
+      "all_gates_pass": false
+    },
+    "VP_clean16_vs_VP_old16": {
+      "comparison": "VP_clean16_vs_VP_old16",
+      "comparator": "VP_old16",
+      "candidate": "VP_clean16",
+      "subject_macro_improvement_deg": -0.12053430096080968,
+      "bootstrap_ci_lower_deg": -0.32080500820556235,
+      "bootstrap_ci_upper_deg": 0.07615130014451198,
+      "positive_outer_fold_count": 2,
+      "outer_fold_improvement_deg": {
+        "1": 0.40974872982817345,
+        "2": -0.4303823802618683,
+        "3": -0.38897616249410244,
+        "4": 0.19621827557807237,
+        "5": -0.0001695378866511573
+      },
+      "improved_subject_count": 13,
+      "harmed_subject_count": 13,
+      "event_worsened_fraction": 0.5163636363636364,
+      "amplitude_changes": {
+        "20_30": {
+          "comparator": 0.6666037546997059,
+          "candidate": 0.6905822739478973,
+          "change_candidate_minus_comparator": 0.023978519248191388
+        },
+        "30_45": {
+          "comparator": 0.36379521765157546,
+          "candidate": 0.3697838199138346,
+          "change_candidate_minus_comparator": 0.005988602262259113
+        },
+        "45_70": {
+          "comparator": 0.2453814982276241,
+          "candidate": 0.24917691036829376,
+          "change_candidate_minus_comparator": 0.0037954121406696684
+        },
+        "ge70": {
+          "comparator": 0.21157601348715369,
+          "candidate": 0.2114984714795359,
+          "change_candidate_minus_comparator": -7.75420076177813e-05
+        }
+      },
+      "gates": {
+        "subject_macro_improvement_at_least_0_05_deg": false,
+        "bootstrap_ci_lower_above_zero": false,
+        "positive_outer_folds_at_least_4": false,
+        "no_amplitude_relative_regression_over_0_01": false
+      },
+      "all_gates_pass": false
+    },
+    "VP_old16_vs_V_vehicle": {
+      "comparison": "VP_old16_vs_V_vehicle",
+      "comparator": "V_vehicle",
+      "candidate": "VP_old16",
+      "subject_macro_improvement_deg": -0.037295540014311415,
+      "bootstrap_ci_lower_deg": -0.279447513905435,
+      "bootstrap_ci_upper_deg": 0.2098266233892517,
+      "positive_outer_fold_count": 2,
+      "outer_fold_improvement_deg": {
+        "1": -0.5298179898109545,
+        "2": 0.3222645573817851,
+        "3": 0.26788516826697073,
+        "4": -0.36413747540410746,
+        "5": -0.23863367943748756
+      },
+      "improved_subject_count": 12,
+      "harmed_subject_count": 14,
+      "event_worsened_fraction": 0.5490909090909091,
+      "amplitude_changes": {
+        "20_30": {
+          "comparator": 0.6677687230141914,
+          "candidate": 0.6666037546997059,
+          "change_candidate_minus_comparator": -0.0011649683144855372
+        },
+        "30_45": {
+          "comparator": 0.37587245917433754,
+          "candidate": 0.36379521765157546,
+          "change_candidate_minus_comparator": -0.012077241522762072
+        },
+        "45_70": {
+          "comparator": 0.25372035771055396,
+          "candidate": 0.2453814982276241,
+          "change_candidate_minus_comparator": -0.008338859482929867
+        },
+        "ge70": {
+          "comparator": 0.20764754327276927,
+          "candidate": 0.21157601348715369,
+          "change_candidate_minus_comparator": 0.003928470214384416
+        }
+      },
+      "gates": {
+        "subject_macro_improvement_at_least_0_05_deg": false,
+        "bootstrap_ci_lower_above_zero": false,
+        "positive_outer_folds_at_least_4": false,
+        "no_amplitude_relative_regression_over_0_01": true
+      },
+      "all_gates_pass": false
+    }
+  },
+  "evidence_boundary": "This run tests whether Run79 preprocessing improves a fixed ExtraTrees physiology increment on the August cohort. It does not establish causal physiological mechanisms or external generalization.",
+  "elapsed_seconds": 102.2636206150055
+}

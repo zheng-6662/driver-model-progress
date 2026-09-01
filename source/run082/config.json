@@ -1,0 +1,52 @@
+{
+  "run_id": "RUN82_LGRS_SEQUENCE_MODEL_V1_20260831",
+  "stage": "full_oof",
+  "sample_hz": 50,
+  "points": 101,
+  "common_channels": [
+    "steer_smooth",
+    "steer_rate",
+    "speed_kmh",
+    "ay",
+    "roll",
+    "curvature",
+    "lateral_distance"
+  ],
+  "lag_samples": [0, 1, 2, 4, 6, 8, 12],
+  "lag_ms": [0, 20, 40, 80, 120, 160, 240],
+  "model": {
+    "role_width": 16,
+    "residual_width": 8,
+    "hidden_width": 64,
+    "kernel_size": 5,
+    "dilations": [1, 4],
+    "dropout": 0.10,
+    "relation_rank": 2
+  },
+  "training": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.001,
+    "batch_size": 64,
+    "gradient_clip": 1.0,
+    "smoke_epochs": 5,
+    "max_epochs": 150,
+    "patience": 15,
+    "seeds": [20260831, 20260832, 20260833],
+    "relation_loss_weight": 0.10,
+    "curve_diff_loss_weight": 0.05
+  },
+  "smoke": {
+    "outer_fold": 1,
+    "seed": 20260831,
+    "parameter_difference_fraction_max": 0.05
+  },
+  "gates": {
+    "lgrs_vs_role_tcn_subject_macro_gain_min_deg": 0.10,
+    "lgrs_vs_extratrees_subject_macro_gain_min_deg": 0.20,
+    "bootstrap_ci_lower_must_exceed_zero": true,
+    "positive_outer_folds_min": 4,
+    "maximum_amplitude_relative_regression": 0.01
+  },
+  "evidence_boundary": "Run82 keeps the release-time 20-point task. No release-post observation, physiology, style, subject ID, teacher, or future target enters the inputs."
+}

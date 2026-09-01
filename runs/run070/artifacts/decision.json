@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "source_files_read": 84,
+  "session_keys": 43,
+  "subjects": [
+    "cwh",
+    "hhx",
+    "lc",
+    "lzh",
+    "unknown",
+    "zsj"
+  ],
+  "pfull_subjects": [
+    "byx",
+    "cwh",
+    "gf",
+    "gzj",
+    "hzh",
+    "jy",
+    "lx",
+    "lxy",
+    "rjy",
+    "txj",
+    "tyy",
+    "xst",
+    "yyl",
+    "yzy",
+    "zdq",
+    "zt",
+    "zx",
+    "zxy"
+  ],
+  "fresh_subjects": [
+    "hhx",
+    "lc",
+    "lzh",
+    "zsj"
+  ],
+  "excluded_existing_pfull_subjects": [
+    "cwh"
+  ],
+  "candidate_external_session_count": 20,
+  "candidate_eeg_external_session_count": 16,
+  "longitudinal_style_usable_subjects": [
+    "hhx",
+    "lc",
+    "zsj"
+  ],
+  "unknown_2025_09_26_21_32_09": {
+    "session_rows": 1,
+    "resolution": "unresolved",
+    "reason": "No explicit subject directory or P_full/manifest match. The hzh filename/header token is a repeated entity/companion marker under multiple unrelated explicit subjects and is not accepted as identity.",
+    "file_paths": [
+      "<SUPPLEMENTAL_RAW_ROOT>\\补充采集数据\\Entity_Recording_2025_09_26_21_32_09(hzh).csv",
+      "<SUPPLEMENTAL_RAW_ROOT>\\补充采集数据\\生理\\Entity_Recording_2025_09_26_21_32_09.csv",
+      "<SUPPLEMENTAL_RAW_ROOT>\\补充采集数据\\车辆\\Entity_Recording_2025_09_26_21_32_09.csv"
+    ]
+  },
+  "raw_files_copied": false,
+  "raw_files_modified": false,
+  "elapsed_seconds": 279.75263357162476,
+  "outputs": {
+    "inventory_files": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run70_fresh_multimodal_inventory_20260830\\inventory_files.csv",
+    "inventory_sessions": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run70_fresh_multimodal_inventory_20260830\\inventory_sessions.csv",
+    "external_subject_summary": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run70_fresh_multimodal_inventory_20260830\\external_subject_summary.csv",
+    "result_cn": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run70_fresh_multimodal_inventory_20260830\\RESULT_CN.md",
+    "decision": "<PROJECT_ROOT>\\05_rebuild_from_raw_20260511\\03_baselines\\run70_fresh_multimodal_inventory_20260830\\decision.json"
+  }
+}

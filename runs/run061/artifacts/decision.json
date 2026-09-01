@@ -1,0 +1,282 @@
+{
+  "contract_id": "RUN61_ROAD_PREVIEW_INCREMENT_V1_20260829",
+  "scientific_status": "DIAGNOSTIC_ONLY",
+  "scientific_status_hard_override_source": "_stage/E.done.json",
+  "diagnostic_only": true,
+  "increment_claim_allowed": false,
+  "underlying_gate_status_for_diagnostic_audit_only": "NO_EFFECTIVE_INCREMENT_FINAL",
+  "primary_candidate_model": "M5_preview",
+  "anchor_pass": true,
+  "G_GEOM": {
+    "source_route_points_rows": 932,
+    "source_route_points_unique_station_rows": 916,
+    "source_module_ranges_rows": 17,
+    "source_module_count": 17,
+    "source_distinct_module_type_count": 9,
+    "source_route_max_m": 17827.1411720651,
+    "output_route_rows": 17828,
+    "savgol_window_points": 151,
+    "savgol_polyorder": 3,
+    "savgol_derivative_order": 1,
+    "station_spacing_m": 1.0,
+    "run45_rows": 1348,
+    "run45_modules": [
+      "curve1",
+      "curve2",
+      "curve3",
+      "zd"
+    ],
+    "run45_rows_by_module": {
+      "curve1": 364,
+      "curve2": 392,
+      "curve3": 302,
+      "zd": 290
+    },
+    "run45_station_alignment": "linear_interpolation_to_global_station_m",
+    "abs_kappa_pearson_by_module": {
+      "curve1": 0.9901448608051786,
+      "curve2": 0.985511630704051,
+      "curve3": 0.9963361847886437,
+      "zd": 0.659961985439544
+    },
+    "abs_kappa_pearson_threshold_by_module": {
+      "curve1": 0.95,
+      "curve2": 0.95,
+      "curve3": 0.95,
+      "zd": 0.6
+    },
+    "abs_kappa_pearson_pass_by_module": {
+      "curve1": true,
+      "curve2": true,
+      "curve3": true,
+      "zd": true
+    },
+    "amplitude_ratio_definition": "median(reconstructed_abs_kappa / run45_abs_kappa) on Run45 active_curvature stations",
+    "active_station_count": 394,
+    "amplitude_ratio_median": 1.0271941353408285,
+    "amplitude_ratio_bounds_inclusive": [
+      0.9,
+      1.15
+    ],
+    "amplitude_ratio_pass": true,
+    "g_geom_pass": true,
+    "unvalidated_source_module_count": 13,
+    "unvalidated_source_modules_expected": true
+  },
+  "G_INFO_confound": {
+    "decision_variant": "E1_172d",
+    "auc_oof": 0.9742244443105836,
+    "interpretation_band": "vehicle_side_already_implies_curve_diagnostic_only",
+    "diagnostic_only": true
+  },
+  "model_gate_diagnostics": {
+    "M5_preview": {
+      "dense_floor_ratio_B_all3": 2.0815932327825895,
+      "dense_floor_ratio_candidate": 2.1295901880005985,
+      "dense_floor_ratio_improvement": -0.04799695521800906,
+      "distance_above_deploy_threshold_2_01": 0.11959018800059873,
+      "paired_bootstrap": {
+        "improvement": -0.04799695521800859,
+        "ci_lower": -0.07141092445530577,
+        "ci_upper": -0.025489887675495693,
+        "top_contributing_subject": "jy",
+        "top_subject_improvement": 0.03679072783266801,
+        "leave_top_subject_improvement": -0.05298446598569545,
+        "subject_delta_values": {
+          "byx": -0.06759809473129308,
+          "cwh": -0.10569588848322597,
+          "gf": 0.013308799586726261,
+          "gzj": -0.013674188379740215,
+          "hzh": -0.057822623117016025,
+          "jy": 0.03679072783266801,
+          "lx": 0.0042219644283467694,
+          "lxy": -0.0656328488779796,
+          "rjy": -0.01889755319416997,
+          "txj": 0.008157330828654441,
+          "tyy": -0.15050261873550452,
+          "xst": -0.1170965945953708,
+          "yyl": -0.1076537109203155,
+          "yzy": -2.536048321299944e-05,
+          "zdq": -0.04242311475564131,
+          "zt": -0.06854406299674176,
+          "zx": -0.06776521800798774,
+          "zxy": -0.043092139322350675
+        }
+      },
+      "curve_vs_straight": {
+        "curve_dense_floor_ratio_improvement": 0.17418994327043213,
+        "straight_dense_floor_ratio_improvement": -0.06375978210947952,
+        "gate_curve_improvement_greater_than_straight": true
+      },
+      "amplitude_bin_checks": {
+        "10_20": {
+          "B_all3": 0.4843241940686629,
+          "candidate": 0.5098693032619483,
+          "change_candidate_minus_B_all3": 0.025545109193285453,
+          "maximum_allowed_regression": 0.01,
+          "pass": false
+        },
+        "20_30": {
+          "B_all3": 0.337728029621526,
+          "candidate": 0.34629059033650855,
+          "change_candidate_minus_B_all3": 0.00856256071498257,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "30_45": {
+          "B_all3": 0.35124402766382945,
+          "candidate": 0.3551636290609382,
+          "change_candidate_minus_B_all3": 0.00391960139710873,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "45_70": {
+          "B_all3": 0.34354165977258533,
+          "candidate": 0.3434921023936128,
+          "change_candidate_minus_B_all3": -4.955737897255341e-05,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "ge70": {
+          "B_all3": 0.3133069839843982,
+          "candidate": 0.31479114483645104,
+          "change_candidate_minus_B_all3": 0.0014841608520528293,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        }
+      },
+      "gates": {
+        "a_dense_floor_ratio_improvement_at_least_0_02": false,
+        "b_subject_paired_bootstrap_95ci_lower_above_zero": false,
+        "c_leave_top_contributing_subject_improvement_still_positive": false,
+        "d_curve_improvement_greater_than_straight": true,
+        "e_dense_floor_ratio_at_most_2_01": false,
+        "f_no_amplitude_bin_regression_over_0_01": false
+      },
+      "information_gate_pass": false,
+      "deployment_gate_pass": false
+    },
+    "M6_preview_only": {
+      "dense_floor_ratio_B_all3": 2.0815932327825895,
+      "dense_floor_ratio_candidate": 2.121953771451984,
+      "dense_floor_ratio_improvement": -0.0403605386693946,
+      "distance_above_deploy_threshold_2_01": 0.11195377145198426,
+      "paired_bootstrap": {
+        "improvement": -0.04036053866939435,
+        "ci_lower": -0.06529977725979204,
+        "ci_upper": -0.01805332490834086,
+        "top_contributing_subject": "lx",
+        "top_subject_improvement": 0.045595389274126985,
+        "leave_top_subject_improvement": -0.045416769724895605,
+        "subject_delta_values": {
+          "byx": -0.1482172025232018,
+          "cwh": -0.11192400210277409,
+          "gf": -0.034386311277230686,
+          "gzj": -0.04368252007935691,
+          "hzh": -0.05861999613119684,
+          "jy": 0.04427350470529001,
+          "lx": 0.045595389274126985,
+          "lxy": -0.017373319176869684,
+          "rjy": -0.09192459783957974,
+          "txj": -0.008397397349126479,
+          "tyy": -0.12017147964094743,
+          "xst": -0.01104535806711926,
+          "yyl": -0.049050008763916964,
+          "yzy": 0.010681013773182979,
+          "zdq": -0.06248734526611344,
+          "zt": -0.00328533180161239,
+          "zx": -0.02756201175220596,
+          "zxy": -0.0389127220304466
+        }
+      },
+      "curve_vs_straight": {
+        "curve_dense_floor_ratio_improvement": 0.02003711895987781,
+        "straight_dense_floor_ratio_improvement": -0.06632623515337199,
+        "gate_curve_improvement_greater_than_straight": true
+      },
+      "amplitude_bin_checks": {
+        "10_20": {
+          "B_all3": 0.4843241940686629,
+          "candidate": 0.5169284792873812,
+          "change_candidate_minus_B_all3": 0.032604285218718276,
+          "maximum_allowed_regression": 0.01,
+          "pass": false
+        },
+        "20_30": {
+          "B_all3": 0.337728029621526,
+          "candidate": 0.3481205763472264,
+          "change_candidate_minus_B_all3": 0.010392546725700391,
+          "maximum_allowed_regression": 0.01,
+          "pass": false
+        },
+        "30_45": {
+          "B_all3": 0.35124402766382945,
+          "candidate": 0.35562939164867113,
+          "change_candidate_minus_B_all3": 0.004385363984841684,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "45_70": {
+          "B_all3": 0.34354165977258533,
+          "candidate": 0.34910730478398083,
+          "change_candidate_minus_B_all3": 0.005565645011395504,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "ge70": {
+          "B_all3": 0.3133069839843982,
+          "candidate": 0.31088124429853375,
+          "change_candidate_minus_B_all3": -0.0024257396858644587,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        }
+      },
+      "gates": {
+        "a_dense_floor_ratio_improvement_at_least_0_02": false,
+        "b_subject_paired_bootstrap_95ci_lower_above_zero": false,
+        "c_leave_top_contributing_subject_improvement_still_positive": false,
+        "d_curve_improvement_greater_than_straight": true,
+        "e_dense_floor_ratio_at_most_2_01": false,
+        "f_no_amplitude_bin_regression_over_0_01": false
+      },
+      "information_gate_pass": false,
+      "deployment_gate_pass": false
+    }
+  },
+  "information_gate_primary_pass": false,
+  "deployment_gate_primary_pass": false,
+  "floor_ratio_by_model_and_support_class": {
+    "B_all3": {
+      "dense_overlap": 2.0815932327825895,
+      "borderline": 2.1563652064446424,
+      "out_of_support": 3.563506572476073
+    },
+    "M5_preview": {
+      "dense_overlap": 2.1295901880005985,
+      "borderline": 2.1479674792155645,
+      "out_of_support": 3.4851066733369778
+    },
+    "M6_preview_only": {
+      "dense_overlap": 2.121953771451984,
+      "borderline": 2.1861622700390497,
+      "out_of_support": 3.5970247705397207
+    }
+  },
+  "thresholds": {
+    "information_dense_improvement_min": 0.02,
+    "deployment_dense_floor_ratio_max": 2.01,
+    "amplitude_bin_max_regression": 0.01,
+    "paired_bootstrap_repetitions": 2000,
+    "paired_bootstrap_seed": 20261469
+  },
+  "availability": {
+    "P_full_available_count": 1667,
+    "P_full_denominator": 2323,
+    "P_full_rate": 0.717606543263022,
+    "run59_truth_subset_available_count": 1609,
+    "run59_truth_subset_denominator": 2136,
+    "run59_truth_subset_rate_not_P_full": 0.7532771535580525
+  },
+  "evidence_boundary": "floor_ratio 的分母是 Run59 OLS d5=0 截距在高斯 RMSE→MAE 近似下的值；不是因果下界，不是理论不可约噪声，仅作跨轮可比的尺度无关参照。",
+  "no_retry_or_search_space_change": true
+}

@@ -1,0 +1,70 @@
+{
+  "contract_id": "RUN62_AMPLITUDE_SHAPE_FACTORIZED_V1_20260829",
+  "scientific_status": "NO_EFFECTIVE_INCREMENT_FINAL",
+  "representation_audit": {
+    "mean_event_mae_deg": 0.3453119160483637,
+    "p95_event_mae_deg": 1.023681065748224,
+    "pass": true
+  },
+  "metrics": {
+    "C_B_all3": {
+      "subject_macro_curve_mae_deg": 12.615146920093583,
+      "pooled_curve_mae_deg_reference_only": 13.184605973110855,
+      "event_shape_correlation_median": 0.83505450796406,
+      "subject_macro_negative_correlation_fraction": 0.11228570925345899,
+      "peak_abs_error_deg": 16.567929807216743,
+      "endpoint_abs_error_deg": 20.814100490790388
+    },
+    "F_factorized_summary": {
+      "subject_macro_curve_mae_deg": 15.513366330004693,
+      "pooled_curve_mae_deg_reference_only": 16.109509613233485,
+      "event_shape_correlation_median": 0.8217622352482531,
+      "subject_macro_negative_correlation_fraction": 0.12312494937567046,
+      "peak_abs_error_deg": 16.38908529795518,
+      "endpoint_abs_error_deg": 21.5323686946972
+    },
+    "R_factorized_phase": {
+      "subject_macro_curve_mae_deg": 15.577154691792186,
+      "pooled_curve_mae_deg_reference_only": 16.19481327035264,
+      "event_shape_correlation_median": 0.817366793393025,
+      "subject_macro_negative_correlation_fraction": 0.1271460972397659,
+      "peak_abs_error_deg": 16.38908529795518,
+      "endpoint_abs_error_deg": 21.723934455356765
+    },
+    "F_blend25": {
+      "subject_macro_curve_mae_deg": 12.747010374005141,
+      "pooled_curve_mae_deg_reference_only": 13.344049368713296,
+      "event_shape_correlation_median": 0.8353178035260626,
+      "subject_macro_negative_correlation_fraction": 0.11582372921259439,
+      "peak_abs_error_deg": 15.89164731500659,
+      "endpoint_abs_error_deg": 20.67451820038947
+    },
+    "R_blend25": {
+      "subject_macro_curve_mae_deg": 12.75342966355402,
+      "pooled_curve_mae_deg_reference_only": 13.353723872204586,
+      "event_shape_correlation_median": 0.8345765349697954,
+      "subject_macro_negative_correlation_fraction": 0.10884533884220932,
+      "peak_abs_error_deg": 15.88011834451793,
+      "endpoint_abs_error_deg": 20.737148585911736
+    }
+  },
+  "improvements_deg": {
+    "F_vs_C": -2.8982194099111105,
+    "R_vs_F": -0.06378836178749303,
+    "R_blend25_vs_C": -0.13828274346043656
+  },
+  "amplitude_bin_changes_R_blend25_vs_C": {
+    "10_20": 0.004330048262717379,
+    "20_30": 0.008066202514792342,
+    "30_45": 0.0031703369583759855,
+    "45_70": 0.002107220206995164,
+    "ge70": 0.007253153659095346
+  },
+  "gates": {
+    "factorization_information": false,
+    "phase_information": false,
+    "protected_combination": false
+  },
+  "tcn_authorized": false,
+  "no_retry_or_search_space_change": true
+}

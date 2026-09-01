@@ -1,0 +1,16 @@
+Run72 implementation and formal training-side screen history:
+1. Freeze Run71/Run64/Run65 input and provenance checks.
+2. Implement strict outer-training -> 3 meta-validation contexts with inner 3-fold subject cross-fitting.
+3. Implement protected EEG, trait, shadow-control, additive, and conditional interaction arms.
+4. Implement support/effect/robustness/harm/identity gates and all required tables.
+5. Run compile, unit tests, formal input preflight, and isolated synthetic smoke only.
+
+Pre-run NO-GO closure added after review:
+- Ordinary masks now come only from each context's meta-fit B_all3 predicted absolute-peak subject-balanced weighted median; no risk/truth/road input defines the threshold.
+- A_additive screens exactly 0.75/0.25, 0.5/0.5, and 0.25/0.75 per context and routes both/E-only/T-only/neither exactly.
+- Required EEG/trait/joint support is evaluated before any arm fit; failure writes an all-arm exact-B no-model result.
+- Internal and final meta-validation trait donor roles require at least two subjects per populated prior-count state, zero support loss, and zero self donor.
+- Validation after closure: compileall pass, 10 pytest tests pass, real preflight no model fit, synthetic smoke pass.
+- After two pre-run reviews, the main agent authorized the same-population training-side formal screen without changing alpha/trust/gain/harm gates.
+- Formal result: `independent_gate_failed_no_additive`; EEG and trait independent gates both failed; additive/interaction were not run by gate; outer-test remained closed.
+- The saved `smoke_final4` provenance uses the pre-authorization config hash by design. It is code-path evidence, not the formal result snapshot.

@@ -1,0 +1,55 @@
+{
+  "status": "REMOVAL_IMPACT_NEGLIGIBLE",
+  "events": 2323,
+  "subjects": 18,
+  "input_dimension_full": 172,
+  "input_dimension_without_rates": 134,
+  "removed_feature_count": 38,
+  "removed_channels": [
+    "yaw_rate",
+    "roll_rate"
+  ],
+  "comparison": {
+    "subject_macro_improvement_full_minus_without_rates_deg": -0.00490531776505095,
+    "candidate_minus_full_mae_deg": 0.00490531776505095,
+    "bootstrap_ci_lower_deg": -0.08653703622873472,
+    "bootstrap_ci_upper_deg": 0.06577450306695148,
+    "positive_outer_fold_count": 3,
+    "outer_fold_improvement_deg": {
+      "1": 0.052066550773884224,
+      "2": -0.1838314418464102,
+      "3": 0.04943637344762353,
+      "4": -0.02463809999029065,
+      "5": 0.11092596305940594
+    },
+    "improved_subject_count": 11,
+    "harmed_subject_count": 7,
+    "event_worsened_fraction": 0.5083943176926389
+  },
+  "amplitude_changes": {
+    "20_30": {
+      "full": 0.337728029621526,
+      "without_rates": 0.3372888685390263,
+      "change_without_minus_full": -0.000439161082499695
+    },
+    "30_45": {
+      "full": 0.35124402766382945,
+      "without_rates": 0.35085475656487186,
+      "change_without_minus_full": -0.0003892710989575887
+    },
+    "45_70": {
+      "full": 0.34354165977258533,
+      "without_rates": 0.342368539539411,
+      "change_without_minus_full": -0.0011731202331743407
+    },
+    "ge70": {
+      "full": 0.3133069839843982,
+      "without_rates": 0.31978261122993373,
+      "change_without_minus_full": 0.00647562724553552
+    }
+  },
+  "gates": {
+    "subject_macro_mae_regression_no_more_than_0_10_deg": true,
+    "each_ge20_amplitude_relative_regression_no_more_than_0_01": true
+  }
+}

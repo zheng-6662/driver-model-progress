@@ -1,0 +1,9 @@
+model,amplitude_bin,event_count,subject_count,subject_macro_relative_mae
+V_vehicle,20_30,6,5,0.7846779036070106
+V_vehicle,30_45,40,13,0.4050460980186132
+V_vehicle,45_70,43,15,0.18711561830662968
+V_vehicle,ge70,58,17,0.23135566579986694
+VP_vehicle_physio,20_30,6,5,0.8013330979425122
+VP_vehicle_physio,30_45,40,13,0.3906075568589643
+VP_vehicle_physio,45_70,43,15,0.19025069246420503
+VP_vehicle_physio,ge70,58,17,0.23349813263046248

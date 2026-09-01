@@ -1,0 +1,127 @@
+{
+  "contract_id": "RUN60_GBM_VS_NOISE_FLOOR_V1_20260828",
+  "scientific_status": "NO_EFFECTIVE_INCREMENT_FINAL",
+  "anchor_pass": true,
+  "floor_ratio_by_model_and_support_class": {
+    "M0_hold": {
+      "dense_overlap": 3.3228373054810714,
+      "borderline": 4.032467333742799,
+      "out_of_support": 7.030411980530805
+    },
+    "M2_vehicle_anchor": {
+      "dense_overlap": 2.1519010308856505,
+      "borderline": 2.2494263782601784,
+      "out_of_support": 3.6535578259268786
+    },
+    "M3_lgbm": {
+      "dense_overlap": 2.0944851175045858,
+      "borderline": 2.2086730540796338,
+      "out_of_support": 3.771707499286318
+    },
+    "M4_hist": {
+      "dense_overlap": 2.1034586250591074,
+      "borderline": 2.1842324666324173,
+      "out_of_support": 3.6354766077179406
+    }
+  },
+  "model_decisions": {
+    "M3_lgbm": {
+      "dense_floor_ratio_anchor": 2.1519010308856505,
+      "dense_floor_ratio_candidate": 2.0944851175045858,
+      "dense_floor_ratio_improvement": 0.057415913381064776,
+      "amplitude_bin_checks": {
+        "20_30": {
+          "anchor": 0.343244235655613,
+          "candidate": 0.3448784756205615,
+          "change_candidate_minus_anchor": 0.0016342399649484918,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "30_45": {
+          "anchor": 0.3658897415824357,
+          "candidate": 0.3540058178475869,
+          "change_candidate_minus_anchor": -0.011883923734848811,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "45_70": {
+          "anchor": 0.36123322533298063,
+          "candidate": 0.3462827412700814,
+          "change_candidate_minus_anchor": -0.014950484062899227,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "ge70": {
+          "anchor": 0.30947934350626766,
+          "candidate": 0.33780838791018575,
+          "change_candidate_minus_anchor": 0.02832904440391809,
+          "maximum_allowed_regression": 0.01,
+          "pass": false
+        }
+      },
+      "paired_bootstrap": {
+        "estimate": 0.05741591338106473,
+        "ci_lower": 0.02248367423448494,
+        "ci_upper": 0.09187719018250526,
+        "repetitions": 2000
+      },
+      "gates": {
+        "a_dense_floor_ratio_improvement_at_least_0_15": false,
+        "b_all_four_amplitude_bins_no_regression_over_0_01": false,
+        "c_subject_paired_bootstrap_95ci_excludes_zero_positive": true
+      },
+      "effective_increment": false
+    },
+    "M4_hist": {
+      "dense_floor_ratio_anchor": 2.1519010308856505,
+      "dense_floor_ratio_candidate": 2.1034586250591074,
+      "dense_floor_ratio_improvement": 0.04844240582654313,
+      "amplitude_bin_checks": {
+        "20_30": {
+          "anchor": 0.343244235655613,
+          "candidate": 0.346603736388695,
+          "change_candidate_minus_anchor": 0.0033595007330819993,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "30_45": {
+          "anchor": 0.3658897415824357,
+          "candidate": 0.352804921519793,
+          "change_candidate_minus_anchor": -0.013084820062642721,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "45_70": {
+          "anchor": 0.36123322533298063,
+          "candidate": 0.34318149738234993,
+          "change_candidate_minus_anchor": -0.018051727950630703,
+          "maximum_allowed_regression": 0.01,
+          "pass": true
+        },
+        "ge70": {
+          "anchor": 0.30947934350626766,
+          "candidate": 0.32941536878808486,
+          "change_candidate_minus_anchor": 0.019936025281817205,
+          "maximum_allowed_regression": 0.01,
+          "pass": false
+        }
+      },
+      "paired_bootstrap": {
+        "estimate": 0.0484424058265428,
+        "ci_lower": 0.015178318926210835,
+        "ci_upper": 0.09176079748704856,
+        "repetitions": 2000
+      },
+      "gates": {
+        "a_dense_floor_ratio_improvement_at_least_0_15": false,
+        "b_all_four_amplitude_bins_no_regression_over_0_01": false,
+        "c_subject_paired_bootstrap_95ci_excludes_zero_positive": true
+      },
+      "effective_increment": false
+    }
+  },
+  "effective_increment_models": [],
+  "selected_effective_model": null,
+  "no_retry_or_search_space_change": true,
+  "evidence_boundary": "The denominator is the Run59 OLS d5=0 intercept under a Gaussian RMSE-to-MAE approximation; it is not a causal lower bound or theoretically irreducible noise."
+}

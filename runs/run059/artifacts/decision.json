@@ -1,0 +1,47 @@
+{
+  "support_status": "adequate_for_outcome_unlock",
+  "covariate_shift_status": "not_established",
+  "identifiability_status": "not_established",
+  "underfitting_evidence_status": "not_established",
+  "dominant_failure_mode": "inconclusive_small_n",
+  "secondary_failure_modes": [],
+  "primary_curve_ratio": 0.679109536482659,
+  "primary_curve_ratio_ci": [
+    0.6512347240999986,
+    0.7081954307766232
+  ],
+  "primary_permutation_p": 0.0001999600079984003,
+  "peak_amplitude_ratio": 0.6574072843968872,
+  "tail5_ratio": 0.6684217976779085,
+  "subjects_with_neighbor_aggregation": 18,
+  "events_with_neighbor_aggregation": 1931,
+  "event_count": 2323,
+  "farthest_over_top5_curve_divergence": 0.9849588198691885,
+  "dense_low_variance_high_oof_error_fraction": 0.30637813211845105,
+  "dense_oof_mae_deg": 10.855313609735923,
+  "out_of_support_oof_mae_deg": 33.55387608402249,
+  "pseudo_repeat_divergence_reduction_fraction": 0.037803086976274436,
+  "classification_checks": {
+    "dense_region_empirical_identifiability_limit": {
+      "curve_ratio_estimate_at_least_0_90": false,
+      "curve_ratio_ci_lower_at_least_0_80": false,
+      "amplitude_or_tail_ratio_at_least_0_90": false,
+      "distance_divergence_gradient_weak": true
+    },
+    "model_underfitting_evidence": {
+      "curve_ratio_ci_upper_at_most_0_80": true,
+      "curve_subject_block_permutation_p_below_0_01": true,
+      "subjects_with_aggregation_at_least_10": true,
+      "amplitude_or_tail_ratio_at_most_0_80": true,
+      "dense_low_variance_high_oof_error_fraction_at_least_0_50": false
+    }
+  },
+  "claim_boundary": "仅判断当前release时输入、P_full 2323事件覆盖和按被试外推合同下的经验可分辨性；不是理论不可预测性或因果效应证明。",
+  "failed_gates": [
+    "identifiability:curve_ratio_estimate_at_least_0_90",
+    "identifiability:curve_ratio_ci_lower_at_least_0_80",
+    "identifiability:amplitude_or_tail_ratio_at_least_0_90",
+    "underfitting:dense_low_variance_high_oof_error_fraction_at_least_0_50"
+  ],
+  "recommended_next_step": "P_full 2323原样复验已完成；本轮不训练预测器。任何后续模型开发须另立冻结合同并由用户授权。"
+}

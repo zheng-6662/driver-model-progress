@@ -1,0 +1,13 @@
+{
+  "contract_id": "RUN69_ROLLING_VEHICLE_OUTER_OOF_V1_20260830",
+  "status": "FORMAL_CHANGED_ESTIMAND_OUTER_OOF_COMPLETE",
+  "advance": false,
+  "pair_gates_pass": true,
+  "protection_gates_pass": false,
+  "latency_p95_ms": 0.7144400000000001,
+  "latency_pass": true,
+  "coverage_pass": true,
+  "floor_ratio_used": false,
+  "changed_estimand": "At t0+0.4 s, after observing steering points 1-8 and causal vehicle measurements through t0+0.4, predict only points 9-20.",
+  "elapsed_seconds": 867.7600910663605
+}

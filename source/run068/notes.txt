@@ -1,0 +1,12 @@
+Run68 implementation log
+========================
+
+2026-08-30
+- Created a new append-only Run68 directory.
+- Frozen the final physiology question to empirical 80% simultaneous interval calibration of Run67 rolling-V points 9-20.
+- Mean correction, high-error classifiers, alternative coverage targets, feature/window search, outer-test access, and overwriting are forbidden.
+- Formal 5x3 training-side experiment was not run during implementation.
+- Only a synthetic no-real-data smoke test is permitted in this implementation turn.
+- Static JSON/Python parsing passed with `F:/python3.11/python.exe`.
+- Synthetic smoke passed with exact sentinel `RUN68_SYNTHETIC_SMOKE_OK`; it covered scale OOF, calibration, center identity, inactive interval identity, outer/subject aggregation, bootstrap gates, and selective-risk gates.
+- No `run_*`, `outputs`, `tables`, or `figures` result directory was created in the Run68 package.

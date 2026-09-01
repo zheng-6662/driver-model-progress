@@ -1,0 +1,50 @@
+{
+  "status": "AUGMENTED_TRAINING_NOT_EFFECTIVE",
+  "old_events": 2323,
+  "august_training_events": 148,
+  "august_subjects": 18,
+  "comparison": {
+    "subject_macro_improvement_deg": -0.3474940008563621,
+    "bootstrap_ci_lower_deg": -0.5898074368550404,
+    "bootstrap_ci_upper_deg": -0.0708142945512574,
+    "positive_outer_fold_count": 1,
+    "outer_fold_improvement_deg": {
+      "1": -0.40811966947035927,
+      "2": 0.09646410065204214,
+      "3": -0.20486774467037527,
+      "4": -0.6016207848157382,
+      "5": -0.6496387402843786
+    },
+    "improved_subject_count": 3,
+    "harmed_subject_count": 15,
+    "event_worsened_fraction": 0.5411106328024107
+  },
+  "amplitude_changes": {
+    "20_30": {
+      "old_training": 0.3372888685390263,
+      "augmented_training": 0.34560086060346507,
+      "change": 0.008311992064438778
+    },
+    "30_45": {
+      "old_training": 0.35085475656487186,
+      "augmented_training": 0.361404569912055,
+      "change": 0.010549813347183135
+    },
+    "45_70": {
+      "old_training": 0.342368539539411,
+      "augmented_training": 0.3499183386675119,
+      "change": 0.007549799128100887
+    },
+    "ge70": {
+      "old_training": 0.31978261122993373,
+      "augmented_training": 0.33630928959963863,
+      "change": 0.016526678369704895
+    }
+  },
+  "gates": {
+    "subject_macro_improvement_at_least_0_05_deg": false,
+    "bootstrap_ci_lower_above_zero": false,
+    "positive_outer_folds_at_least_4": false,
+    "no_ge20_amplitude_relative_regression_over_0_01": false
+  }
+}

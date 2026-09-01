@@ -1,0 +1,83 @@
+{
+  "contract_id": "RUN73_EYE_TRACKING_INCREMENT_V1_20260830",
+  "status": "frozen_before_result",
+  "seed": 20260830,
+  "purpose": "在原18位被试和P_full=2323上，只加入预测起点前眼动数值，检验眼动是否对当前车辆组合基线提供事件时序增量。",
+  "population": {
+    "events": 2323,
+    "subjects": 18,
+    "recordings": 85,
+    "outer_fold_counts": {"1": 352, "2": 471, "3": 435, "4": 539, "5": 526},
+    "excluded_subjects": ["zyl"],
+    "sample_deletion": false,
+    "subject_disjoint_outer_folds": true
+  },
+  "inputs": {
+    "pfull_manifest": "05_rebuild_from_raw_20260511/03_baselines/run57_a_full_release_population_causal_baseline_20260827/run_1/tables/pfull_event_manifest.csv",
+    "vehicle_summary_cache": "05_rebuild_from_raw_20260511/03_baselines/run57_a_full_release_population_causal_baseline_20260827/run_1/tables/causal_input_cache.npz",
+    "run57_model_selection": "05_rebuild_from_raw_20260511/03_baselines/run57_a_full_release_population_causal_baseline_20260827/run_1/tables/model_selection.csv",
+    "run60_predictions": "05_rebuild_from_raw_20260511/03_baselines/run60_gbm_vs_noise_floor_20260828/tables/per_event_predictions.csv",
+    "run62_predictions": "05_rebuild_from_raw_20260511/03_baselines/run62_amplitude_shape_factorized_20260829/tables/per_event_predictions.csv",
+    "eye_root": "F:/补充采集数据/补充采集数据/zx-hzh"
+  },
+  "eye": {
+    "video_used": false,
+    "window_start_relative_to_prediction_anchor_s": -2.0,
+    "window_end_relative_to_prediction_anchor_s": 0.0,
+    "nominal_sample_hz": 60.0,
+    "minimum_window_rows": 60,
+    "minimum_valid_rows_per_family": 30,
+    "maximum_eye_filename_to_vehicle_start_gap_s": 5.0,
+    "absolute_pupil_level_used": false,
+    "absolute_gaze_position_used": false,
+    "normalization": "只用2秒窗口内相对变化和动态；瞳孔按窗口中位数归一，不跨被试使用绝对瞳孔面积。",
+    "missing_handling": "不删事件；仅用外折训练行nanmedian填充，并保留eye/pupil/gaze/fixation/saccade可用性与有效率。"
+  },
+  "models": {
+    "B_all3": "冻结读取Run60 M2/M3/M4 OOF均值，并与Run62 C_B_all3逐点核对",
+    "M2_eye_true": "Run57 172维车辆摘要加冻结眼动特征；只替换M2 ExtraTrees分支",
+    "M2_eye_within_recording_shift_control": "同一recording内按事件顺序循环错位眼动特征；保持被试、recording、缺失率和边际分布",
+    "B_all3_eye_true": "(M2_eye_true + frozen_M3_lgbm + frozen_M4_hist) / 3",
+    "B_all3_eye_shift_control": "(M2_eye_shift_control + frozen_M3_lgbm + frozen_M4_hist) / 3",
+    "extratrees": {
+      "n_estimators": 300,
+      "min_samples_leaf_and_max_features": "每折沿用Run57 M0_extratrees既有训练侧选择，不重新搜索",
+      "random_state_base": 20260827,
+      "n_jobs": 8
+    }
+  },
+  "negative_control": {
+    "type": "within_recording_circular_event_shift",
+    "uses_target_for_shift": false,
+    "purpose": "区分事件前眼动状态与稳定被试/设备/recording背景或新增特征容量造成的假增益"
+  },
+  "metrics": {
+    "primary": "subject_macro_curve_mae_deg",
+    "amplitude_primary": "subject_macro_relative_mae_over_median_release_amplitude",
+    "pooled_reference_only": true,
+    "report": [
+      "curve_mae_deg",
+      "head5_mae_deg",
+      "tail5_mae_deg",
+      "endpoint_mae_deg",
+      "peak_time_mae_s",
+      "event_harm_fraction",
+      "subject_harm",
+      "eye_available_and_unavailable_strata",
+      "amplitude_bins",
+      "road_reference_strata",
+      "outer_folds"
+    ]
+  },
+  "bootstrap": {"repetitions": 2000, "unit": "subject", "seed": 20260830},
+  "decision_gates": {
+    "a_true_vs_B_all3_subject_macro_gain_deg_min": 0.05,
+    "b_true_vs_B_all3_bootstrap_ci_lower_gt": 0.0,
+    "c_true_vs_shift_subject_macro_gain_deg_min": 0.02,
+    "d_true_vs_shift_bootstrap_ci_lower_gt": 0.0,
+    "e_positive_outer_folds_min": 4,
+    "f_leave_top_subject_gain_gt": 0.0,
+    "g_each_ge20_amplitude_relative_regression_max": 0.01
+  },
+  "evidence_boundary": "本轮是同一P_full=2323、同一18位被试上的发展性OOF，不是外部确认。视频未进入模型。若真实眼动不优于recording内错位对照，不能把改善解释为事件前眼动状态。"
+}
