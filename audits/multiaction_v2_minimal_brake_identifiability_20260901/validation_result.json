@@ -1,0 +1,12 @@
+{
+  "population_and_trigger_counts": "PASS",
+  "brake_detector_unit_tests": "4/4 PASS",
+  "low_mu_excluded": "PASS",
+  "august_weak_labels_excluded": "PASS",
+  "manual_double_review": "PENDING",
+  "ordinary_window_false_positive_gate": "FAIL",
+  "physiology_support_gate": "FAIL",
+  "public_privacy": "PASS",
+  "archive_structure": "PASS",
+  "models_trained": 0
+}

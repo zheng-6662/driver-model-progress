@@ -1,0 +1,26 @@
+[
+  {
+    "path": "README.md",
+    "role": "公开总体报告"
+  },
+  {
+    "path": "summary.json",
+    "role": "公开总体状态"
+  },
+  {
+    "path": "trigger_summary.csv",
+    "role": "四个匿名触发编号总体结果"
+  },
+  {
+    "path": "physiology_support_by_trigger_summary.csv",
+    "role": "正式生理子集触发编号汇总"
+  },
+  {
+    "path": "threshold_time_sensitivity_summary.csv",
+    "role": "预注册阈值与时间窗敏感性汇总"
+  },
+  {
+    "path": "validation_result.json",
+    "role": "测试、停止门与隐私检查"
+  }
+]

@@ -1,0 +1,5 @@
+trigger_number,events,positives,negatives
+ExternTrigger01,80,15,65
+ExternTrigger03,74,5,69
+ExternTrigger04,71,11,60
+ExternTrigger06,80,5,75

@@ -1,0 +1,22 @@
+{
+  "task_id": "MULTIACTION_V2_MINIMAL_BRAKE_IDENTIFIABILITY_20260901",
+  "final_status": "BLOCKED_BY_BRAKE_LABEL_VALIDITY",
+  "main_events": 305,
+  "main_positives": 36,
+  "main_negatives": 269,
+  "manual_review_status": "PENDING_DOUBLE_HUMAN_REVIEW",
+  "ordinary_window_count": 60,
+  "ordinary_window_false_positive_rate": 0.15,
+  "ordinary_window_gate_pass": false,
+  "physiology_support": {
+    "test_subjects": 14,
+    "test_events": 182,
+    "positives": 25,
+    "negatives": 157,
+    "subjects_with_positive": 10
+  },
+  "physiology_support_gate_pass": false,
+  "models_trained": 0,
+  "transformer_trained": false,
+  "checksums_generated": false
+}
